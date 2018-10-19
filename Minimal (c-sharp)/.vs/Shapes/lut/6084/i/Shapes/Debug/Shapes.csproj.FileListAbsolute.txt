@@ -1,0 +1,9 @@
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\b\Shapes\bin\Debug\Shapes.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Debug\Shapes.csproj.CoreCompileInputs.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Debug\Shapes.csproj.CopyComplete
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Debug\Shapes.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW3\HW1-OO-master\Minimal (c-sharp)\.vs\Shapes\lut\0\b\Shapes\bin\Debug\Shapes.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW3\HW1-OO-master\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Debug\Shapes.csprojAssemblyReference.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW3\HW1-OO-master\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Debug\Shapes.csproj.CoreCompileInputs.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW3\HW1-OO-master\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Debug\Shapes.csproj.CopyComplete
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW3\HW1-OO-master\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Debug\Shapes.dll

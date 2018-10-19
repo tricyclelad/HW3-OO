@@ -1,0 +1,9 @@
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\bin\Debug\ShapesTests.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\bin\Debug\ShapesTests.pdb
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\bin\Debug\Shapes.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\bin\Debug\Shapes.pdb
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\obj\Debug\ShapesTests.csprojAssemblyReference.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\obj\Debug\ShapesTests.csproj.CoreCompileInputs.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\obj\Debug\ShapesTests.csproj.CopyComplete
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\obj\Debug\ShapesTests.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\ShapesTests\obj\Debug\ShapesTests.pdb

@@ -1,0 +1,6 @@
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\Shapes\bin\Release\Shapes.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\Shapes\bin\Release\Shapes.pdb
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\Shapes\obj\Release\Shapes.csprojAssemblyReference.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\Shapes\obj\Release\Shapes.csproj.CoreCompileInputs.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\Shapes\obj\Release\Shapes.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\Shapes\obj\Release\Shapes.pdb
