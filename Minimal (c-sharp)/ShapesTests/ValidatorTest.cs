@@ -106,11 +106,11 @@ namespace ShapesTests
         [TestMethod]
         public void TestArePointsEqual()
         {
-            Point Point1 = new Point(0,0);
-            Point Point2 = new Point(0,0);
-            Point Point3 = new Point(.89,.90);
-            Point Point4 = new Point(.89,.90);
-            Point Point5 = new Point(-1,0);
+            Point Point1 = new Point("null","null",0,0);
+            Point Point2 = new Point("null","null",0,0);
+            Point Point3 = new Point("null","null",.89,.90);
+            Point Point4 = new Point("null","null",.89,.90);
+            Point Point5 = new Point("null","null",-1,0);
 
             Assert.IsTrue(Validator.ArePointsEqual(Point1,Point2));
             Assert.IsTrue(Validator.ArePointsEqual(Point1,Point1));
@@ -122,11 +122,11 @@ namespace ShapesTests
         [TestMethod]
         public void TestAreLinesEqual()
         {
-            Line Line1 = new Line(0,0,10,10);
-            Line Line2 = new Line(0,0,10,10);
-            Line Line3 = new Line(0,0,12,12);
-            Line Line4 = new Line(12,12,10,10);
-            Line Line5 = new Line(.89,.89,.90,.90);
+            Line Line1 = new Line("null","null",0,0,10,10);
+            Line Line2 = new Line("null","null",0,0,10,10);
+            Line Line3 = new Line("null","null",0,0,12,12);
+            Line Line4 = new Line("null","null",12,12,10,10);
+            Line Line5 = new Line("null","null",.89,.89,.90,.90);
 
             Assert.IsTrue(Validator.AreLinesEqual(Line1,Line2)); 
             Assert.IsTrue(Validator.AreLinesEqual(Line1,Line1)); 
@@ -140,9 +140,9 @@ namespace ShapesTests
         [TestMethod]
         public void TestAreLineSlopesEqual()
         {
-            Line Line1 = new Line(0,0,1,1);
-            Line Line2 = new Line(0,0,1,1);
-            Line Line3 = new Line(0,0,1,-1);
+            Line Line1 = new Line("null","null",0,0,1,1);
+            Line Line2 = new Line("null","null",0,0,1,1);
+            Line Line3 = new Line("null","null",0,0,1,-1);
             var myvar = Line1.ComputeSlope(); 
             var myvar2 = Line3.ComputeSlope(); 
 
