@@ -11,7 +11,7 @@ namespace Shapes
     {
         private static Dictionary<string, EmbeddedPicture> embeddedPictureByName = new Dictionary<string, EmbeddedPicture>();
 
-        public static EmbeddedPicture getEmbeddedPicture(string _key, string _color, Bitmap _storedImage, double _width, double _height, List<Point> _picturePoints)         
+        public static EmbeddedPicture getEmbeddedPicture(string _key, string _color, Bitmap _storedImage, int _width, int _height, List<Point> _picturePoints)         
         {
             EmbeddedPicture myEmbeddedPicture = embeddedPictureByName[_key];
             if (myEmbeddedPicture == null)
