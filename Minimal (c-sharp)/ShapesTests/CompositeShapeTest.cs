@@ -58,7 +58,7 @@ namespace ShapesTests
             Jumble.Move(1,1);
             Jumble.RemoveAll();
             Assert.AreEqual(_myShapes.Count, 0);
-
+            Jumble.Add(Jumble);
             Jumble.Add(rect2d);
             Jumble.Add(p12d);
             Assert.AreEqual(Jumble.GetData(), "Name: Rectangle1\tcolor: Fusion Blue\nName: Point1\tcolor: Red\n") ;

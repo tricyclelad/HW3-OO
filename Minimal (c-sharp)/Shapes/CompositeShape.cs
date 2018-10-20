@@ -20,6 +20,8 @@ namespace Shapes
 
         public override void Add(Shape2d _shape2d)
         {
+            if (_shape2d == this)
+                return;
             if (!myShapes.Contains(_shape2d)) 
                 myShapes.Add(_shape2d);
         }
