@@ -16,11 +16,11 @@ namespace Shapes
         public Line Edge3 { get; private set; }
 
 
-        public Triangle(double x1, double y1, double x2, double y2, double x3, double y3)
+        public Triangle(string _name, string _color, double x1, double y1, double x2, double y2, double x3, double y3) : base(_name, _color)
         {
-            var Vertex1 = new Point(x1, y1);
-            var Vertex2 = new Point(x2, y2);
-            var Vertex3 = new Point(x3, y3);
+            var Vertex1 = new Point(_name + "'s Vertex1", _color, x1, y1);
+            var Vertex2 = new Point(_name + "'s Vertex2", _color, x2, y2);
+            var Vertex3 = new Point(_name + "'s Vertex3", _color, x3, y3);
             myPoints = new List<Point>();
             myPoints.Add(Vertex1);
             myPoints.Add(Vertex2);
@@ -31,9 +31,9 @@ namespace Shapes
                 throw new ShapeException("Two or more Triangle Vertices are equal");
             }
  
-            Edge1 = new Line(Vertex1, Vertex2); 
-            Edge2 = new Line(Vertex2, Vertex3); 
-            Edge3 = new Line(Vertex3, Vertex1);
+            Edge1 = new Line(_name + "'s Edge1", _color, Vertex1, Vertex2); 
+            Edge2 = new Line(_name + "'s Edge2", _color, Vertex2, Vertex3); 
+            Edge3 = new Line(_name + "'s Edge2", _color, Vertex3, Vertex1);
 
             if(AreEdgeSlopesEqual())
             {
@@ -51,7 +51,7 @@ namespace Shapes
             //}
 
         }
-        public Triangle(Point _Vertex1, Point _Vertex2, Point _Vertex3)
+        public Triangle(string _name, string _color, Point _Vertex1, Point _Vertex2, Point _Vertex3): base(_name, _color)
         {
             
             var Vertex1 = _Vertex1;
@@ -67,9 +67,9 @@ namespace Shapes
                 throw new ShapeException("Two or more Triangle Vertices are equal");
             }
 
-            Edge1 = new Line(Vertex1, Vertex2); 
-            Edge2 = new Line(Vertex2, Vertex3); 
-            Edge3 = new Line(Vertex3, Vertex1); 
+            Edge1 = new Line(_name + "'s Edge1", _color, Vertex1, Vertex2); 
+            Edge2 = new Line(_name + "'s Edge1", _color, Vertex2, Vertex3); 
+            Edge3 = new Line(_name + "'s Edge1", _color, Vertex3, Vertex1); 
 
             if(AreEdgeSlopesEqual())
             {

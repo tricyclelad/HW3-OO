@@ -23,8 +23,6 @@ namespace Shapes
             myPoints = new List<Point>();
             myPoints.Add(Center);
             Radius = radius;
-            this.name = _name;
-            this.color = _color;
         }
 
         /**
