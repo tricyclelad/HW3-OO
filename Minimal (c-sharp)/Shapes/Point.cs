@@ -11,6 +11,8 @@
             Validator.ValidateDouble(y, "Invalid y-location point");
             X = x;
             Y = y;
+            this.myPoints = new System.Collections.Generic.List<Point>();
+            myPoints.Add(this);
         }
 
         /**
