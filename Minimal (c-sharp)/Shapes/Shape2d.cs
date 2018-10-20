@@ -27,6 +27,7 @@ namespace Shapes
 
         public abstract string GetData();
         public abstract double ComputeArea();
+        public abstract void Move(double deltaX, double deltaY);
         public abstract List<Shape2d> GetMyShapes();
     }
 }

@@ -37,7 +37,7 @@ namespace Shapes
             return "Name: " + name + "\tcolor: " + color;
         }
         //public abstract double ComputeArea();
-        public void Move(double deltaX, double deltaY)
+        public override void Move(double deltaX, double deltaY)
         {
             foreach (var point in myPoints)
             {

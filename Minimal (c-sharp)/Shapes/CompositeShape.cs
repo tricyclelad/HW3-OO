@@ -20,7 +20,8 @@ namespace Shapes
 
         public override void Add(Shape2d _shape2d)
         {
-            myShapes.Add(_shape2d);
+            if (!myShapes.Contains(_shape2d)) 
+                myShapes.Add(_shape2d);
         }
 
         public override void Remove(Shape2d _shape2d)
@@ -53,6 +54,14 @@ namespace Shapes
 
             }
             return total;
+        }
+
+        public override void Move(double deltaX, double deltaY)
+        {
+            foreach (Shape2d twoD in myShapes)
+            {
+                twoD.Move(deltaX, deltaY);
+            }
         }
 
     }
