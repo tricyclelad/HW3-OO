@@ -27,6 +27,10 @@ namespace Shapes
         {
             myShapes.Remove(_shape2d);
         }
+        public override void RemoveAll()
+        {
+            myShapes.RemoveRange(0, myShapes.Count);
+        }
 
         public override string GetData()
 

@@ -41,6 +41,17 @@ namespace ShapesTests
             Assert.AreEqual(_myShapes.Count, 1);
             Jumble.Remove(p22d);
             Assert.AreEqual(_myShapes.Count, 0);
+
+            Jumble.Add(rect2d);
+            Jumble.Add(rect2d);
+            Jumble.Add(rect2d);
+            Jumble.Add(rect2d);
+            Jumble.Add(rect2d);
+            Jumble.Add(rect2d);
+            Jumble.Add(p12d);
+            Assert.AreEqual(_myShapes.Count, 7);
+            Jumble.RemoveAll();
+            Assert.AreEqual(_myShapes.Count, 0);
             //Shape2d = 
         }
     }

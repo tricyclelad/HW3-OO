@@ -20,7 +20,11 @@ namespace Shapes
         {
             //Operation not permitted since this is a leaf node.          
         }
-
+        public override void RemoveAll()
+        {
+            //Operation not permitted since this is a leaf node.          
+        }
+        
         public override List<Shape2d> GetMyShapes()
         {
             List<Shape2d> myNullShapes = new List<Shape2d>();

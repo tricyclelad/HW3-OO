@@ -23,6 +23,7 @@ namespace Shapes
         public abstract void Add(Shape2d _shape2d);
 
         public abstract void Remove(Shape2d _shape2d);
+        public abstract void RemoveAll();
 
         public abstract string GetData();
         public abstract double ComputeArea();
