@@ -16,8 +16,8 @@ namespace ShapesTests
 
             var myLine = new Line(p1, p2);
            
-            Assert.AreSame(p1, myLine.Point1);
-            Assert.AreSame(p2, myLine.Point2);
+            Assert.AreSame(p1, myLine.myPoints[0]);
+            Assert.AreSame(p2, myLine.myPoints[1]);
 
             try
             {
@@ -36,14 +36,14 @@ namespace ShapesTests
             p1 = new Point(1.4,2.5);
             p2 = new Point(4.6, 10.7);
             myLine = new Line(p1, p2);
-            Assert.AreSame(p1, myLine.Point1);
-            Assert.AreSame(p2, myLine.Point2);
+            Assert.AreSame(p1, myLine.myPoints[0]);
+            Assert.AreSame(p2, myLine.myPoints[1]);
 
             myLine = new Line(1, 3.33, 4.444, 5.5555);
-            Assert.AreEqual(1, myLine.Point1.X, 0);
-            Assert.AreEqual(3.33, myLine.Point1.Y, 0);
-            Assert.AreEqual(4.444, myLine.Point2.X, 0);
-            Assert.AreEqual(5.5555, myLine.Point2.Y, 0);
+            Assert.AreEqual(1, myLine.myPoints[0].X, 0);
+            Assert.AreEqual(3.33, myLine.myPoints[0].Y, 0);
+            Assert.AreEqual(4.444, myLine.myPoints[1].X, 0);
+            Assert.AreEqual(5.5555, myLine.myPoints[1].Y, 0);
         }
 
         [TestMethod]
@@ -77,22 +77,22 @@ namespace ShapesTests
             var myLine = new Line(1, 2, 4, 10);
 
             myLine.Move(3, 4);
-            Assert.AreEqual(4, myLine.Point1.X, 0);
-            Assert.AreEqual(6, myLine.Point1.Y, 0);
-            Assert.AreEqual(7, myLine.Point2.X, 0);
-            Assert.AreEqual(14, myLine.Point2.Y, 0);
+            Assert.AreEqual(4, myLine.myPoints[0].X, 0);
+            Assert.AreEqual(6, myLine.myPoints[0].Y, 0);
+            Assert.AreEqual(7, myLine.myPoints[1].X, 0);
+            Assert.AreEqual(14, myLine.myPoints[1].Y, 0);
 
             myLine.Move(.4321, .7654);
-            Assert.AreEqual(4.4321, myLine.Point1.X, 0);
-            Assert.AreEqual(6.7654, myLine.Point1.Y, 0);
-            Assert.AreEqual(7.4321, myLine.Point2.X, 0);
-            Assert.AreEqual(14.7654, myLine.Point2.Y, 0);
+            Assert.AreEqual(4.4321, myLine.myPoints[0].X, 0);
+            Assert.AreEqual(6.7654, myLine.myPoints[0].Y, 0);
+            Assert.AreEqual(7.4321, myLine.myPoints[1].X, 0);
+            Assert.AreEqual(14.7654, myLine.myPoints[1].Y, 0);
 
             myLine.Move(-0.4321, -0.7654);
-            Assert.AreEqual(4, myLine.Point1.X, 0);
-            Assert.AreEqual(6, myLine.Point1.Y, 0);
-            Assert.AreEqual(7, myLine.Point2.X, 0);
-            Assert.AreEqual(14, myLine.Point2.Y, 0);
+            Assert.AreEqual(4, myLine.myPoints[0].X, 0);
+            Assert.AreEqual(6, myLine.myPoints[0].Y, 0);
+            Assert.AreEqual(7, myLine.myPoints[1].X, 0);
+            Assert.AreEqual(14, myLine.myPoints[1].Y, 0);
         }
 
         [TestMethod]

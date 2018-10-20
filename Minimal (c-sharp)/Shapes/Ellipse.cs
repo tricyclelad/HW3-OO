@@ -25,7 +25,7 @@ namespace Shapes
         {
             BindingRectangle = _BindingRectangle;
             Line Diagonal = new Line(BindingRectangle.Vertex1, BindingRectangle.Vertex3);
-            Point CenterOfDiagonal = new Point(((Diagonal.Point1.X + Diagonal.Point2.X)/2), ((Diagonal.Point1.Y + Diagonal.Point2.Y)/2));
+            Point CenterOfDiagonal = new Point(((Diagonal.myPoints[0].X + Diagonal.myPoints[1].X)/2), ((Diagonal.myPoints[0].Y + Diagonal.myPoints[1].Y)/2));
             Point CenterOfRectangleEdge1 = new Point(((BindingRectangle.Vertex1.X + BindingRectangle.Vertex2.X)/2), ((BindingRectangle.Vertex1.Y + BindingRectangle.Vertex2.Y)/2));
             Point CenterOfRectangleEdge2 = new Point(((BindingRectangle.Vertex2.X + BindingRectangle.Vertex3.X)/2), ((BindingRectangle.Vertex2.Y + BindingRectangle.Vertex3.Y)/2));
             Point CenterOfRectangleEdge3 = new Point(((BindingRectangle.Vertex3.X + BindingRectangle.Vertex4.X)/2), ((BindingRectangle.Vertex3.Y + BindingRectangle.Vertex4.Y)/2));
@@ -98,7 +98,7 @@ namespace Shapes
             Rectangle _BindingRectangle = new Rectangle(_Vertex1, _Vertex2, _Vertex3, _Vertex4);
             BindingRectangle = _BindingRectangle;
             Line Diagonal = new Line(BindingRectangle.Vertex1, BindingRectangle.Vertex3);
-            Point CenterOfDiagonal = new Point(((Diagonal.Point1.X + Diagonal.Point2.X) / 2), ((Diagonal.Point1.Y + Diagonal.Point2.Y) / 2));
+            Point CenterOfDiagonal = new Point(((Diagonal.myPoints[0].X + Diagonal.myPoints[1].X) / 2), ((Diagonal.myPoints[0].Y + Diagonal.myPoints[1].Y) / 2));
             Point CenterOfRectangleEdge1 = new Point(((BindingRectangle.Vertex1.X + BindingRectangle.Vertex2.X) / 2), ((BindingRectangle.Vertex1.Y + BindingRectangle.Vertex2.Y) / 2));
             Point CenterOfRectangleEdge2 = new Point(((BindingRectangle.Vertex2.X + BindingRectangle.Vertex3.X) / 2), ((BindingRectangle.Vertex2.Y + BindingRectangle.Vertex3.Y) / 2));
             Point CenterOfRectangleEdge3 = new Point(((BindingRectangle.Vertex3.X + BindingRectangle.Vertex4.X) / 2), ((BindingRectangle.Vertex3.Y + BindingRectangle.Vertex4.Y) / 2));

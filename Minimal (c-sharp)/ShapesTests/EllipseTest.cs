@@ -33,15 +33,15 @@ namespace ShapesTests
             Line _Axis1 = new Line(-2, 0, 2, 0);
             Line _Axis2 = new Line(0, 1, 0, -1);
 
-            Assert.AreEqual(_Axis1.Point1.X, Ellipse.Axis1.Point1.X);
-            Assert.AreEqual(_Axis1.Point1.Y, Ellipse.Axis1.Point1.Y);
-            Assert.AreEqual(_Axis1.Point2.X, Ellipse.Axis1.Point2.X);
-            Assert.AreEqual(_Axis1.Point2.Y, Ellipse.Axis1.Point2.Y);
+            Assert.AreEqual(_Axis1.myPoints[0].X, Ellipse.Axis1.myPoints[0].X);
+            Assert.AreEqual(_Axis1.myPoints[0].Y, Ellipse.Axis1.myPoints[0].Y);
+            Assert.AreEqual(_Axis1.myPoints[1].X, Ellipse.Axis1.myPoints[1].X);
+            Assert.AreEqual(_Axis1.myPoints[1].Y, Ellipse.Axis1.myPoints[1].Y);
 
-            Assert.AreEqual(_Axis2.Point1.X, Ellipse.Axis2.Point1.X);
-            Assert.AreEqual(_Axis2.Point1.Y, Ellipse.Axis2.Point1.Y);
-            Assert.AreEqual(_Axis2.Point2.X, Ellipse.Axis2.Point2.X);
-            Assert.AreEqual(_Axis2.Point2.Y, Ellipse.Axis2.Point2.Y);
+            Assert.AreEqual(_Axis2.myPoints[0].X, Ellipse.Axis2.myPoints[0].X);
+            Assert.AreEqual(_Axis2.myPoints[0].Y, Ellipse.Axis2.myPoints[0].Y);
+            Assert.AreEqual(_Axis2.myPoints[1].X, Ellipse.Axis2.myPoints[1].X);
+            Assert.AreEqual(_Axis2.myPoints[1].Y, Ellipse.Axis2.myPoints[1].Y);
 
             Rectangle _BindingRectangle = new Rectangle(-2, -1, -2, 1, 2, 1, 2, -1);
             Assert.AreEqual(_BindingRectangle.Vertex1.X, Ellipse.BindingRectangle.Vertex1.X);
@@ -89,15 +89,15 @@ namespace ShapesTests
             Line _Axis1 = new Line(-2, 0, 2, 0);
             Line _Axis2 = new Line(0, 1, 0, -1);
 
-            Assert.AreEqual(_Axis1.Point1.X, Ellipse.Axis1.Point1.X);
-            Assert.AreEqual(_Axis1.Point1.Y, Ellipse.Axis1.Point1.Y);
-            Assert.AreEqual(_Axis1.Point2.X, Ellipse.Axis1.Point2.X);
-            Assert.AreEqual(_Axis1.Point2.Y, Ellipse.Axis1.Point2.Y);
+            Assert.AreEqual(_Axis1.myPoints[0].X, Ellipse.Axis1.myPoints[0].X);
+            Assert.AreEqual(_Axis1.myPoints[0].Y, Ellipse.Axis1.myPoints[0].Y);
+            Assert.AreEqual(_Axis1.myPoints[1].X, Ellipse.Axis1.myPoints[1].X);
+            Assert.AreEqual(_Axis1.myPoints[1].Y, Ellipse.Axis1.myPoints[1].Y);
 
-            Assert.AreEqual(_Axis2.Point1.X, Ellipse.Axis2.Point1.X);
-            Assert.AreEqual(_Axis2.Point1.Y, Ellipse.Axis2.Point1.Y);
-            Assert.AreEqual(_Axis2.Point2.X, Ellipse.Axis2.Point2.X);
-            Assert.AreEqual(_Axis2.Point2.Y, Ellipse.Axis2.Point2.Y);
+            Assert.AreEqual(_Axis2.myPoints[0].X, Ellipse.Axis2.myPoints[0].X);
+            Assert.AreEqual(_Axis2.myPoints[0].Y, Ellipse.Axis2.myPoints[0].Y);
+            Assert.AreEqual(_Axis2.myPoints[1].X, Ellipse.Axis2.myPoints[1].X);
+            Assert.AreEqual(_Axis2.myPoints[1].Y, Ellipse.Axis2.myPoints[1].Y);
 
             Rectangle _BindingRectangle = new Rectangle(-2, -1, -2, 1, 2, 1, 2, -1);
             Assert.AreEqual(_BindingRectangle.Vertex1.X, Ellipse.BindingRectangle.Vertex1.X);
@@ -146,15 +146,15 @@ namespace ShapesTests
             Line _Axis1 = new Line(0, 2, 4, 2);
             Line _Axis2 = new Line(2, 3, 2, 1);
 
-            Assert.AreEqual(_Axis1.Point1.X, MyEllipse.Axis1.Point1.X);
-            Assert.AreEqual(_Axis1.Point1.Y, MyEllipse.Axis1.Point1.Y);
-            Assert.AreEqual(_Axis1.Point2.X, MyEllipse.Axis1.Point2.X);
-            Assert.AreEqual(_Axis1.Point2.Y, MyEllipse.Axis1.Point2.Y);
+            Assert.AreEqual(_Axis1.myPoints[0].X, MyEllipse.Axis1.myPoints[0].X);
+            Assert.AreEqual(_Axis1.myPoints[0].Y, MyEllipse.Axis1.myPoints[0].Y);
+            Assert.AreEqual(_Axis1.myPoints[1].X, MyEllipse.Axis1.myPoints[1].X);
+            Assert.AreEqual(_Axis1.myPoints[1].Y, MyEllipse.Axis1.myPoints[1].Y);
 
-            Assert.AreEqual(_Axis2.Point1.X, MyEllipse.Axis2.Point1.X);
-            Assert.AreEqual(_Axis2.Point1.Y, MyEllipse.Axis2.Point1.Y);
-            Assert.AreEqual(_Axis2.Point2.X, MyEllipse.Axis2.Point2.X);
-            Assert.AreEqual(_Axis2.Point2.Y, MyEllipse.Axis2.Point2.Y);
+            Assert.AreEqual(_Axis2.myPoints[0].X, MyEllipse.Axis2.myPoints[0].X);
+            Assert.AreEqual(_Axis2.myPoints[0].Y, MyEllipse.Axis2.myPoints[0].Y);
+            Assert.AreEqual(_Axis2.myPoints[1].X, MyEllipse.Axis2.myPoints[1].X);
+            Assert.AreEqual(_Axis2.myPoints[1].Y, MyEllipse.Axis2.myPoints[1].Y);
 
             myRectangle.Move(1, 1);
             Assert.AreEqual(myRectangle.Vertex1.X, MyEllipse.BindingRectangle.Vertex1.X);

@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Shapes
 {
-    public class Line
+    public class Line : Shape
     {
-        public Point Point1 { get; private set; }
-        public Point Point2 { get; private set; }
+        //public Point Point1 { get; private set; }
+        //public Point Point2 { get; private set; }
 
         /**
          * Constructor based on x-y Locations
@@ -19,8 +20,11 @@ namespace Shapes
         {
             if (x1 == x2 && y1 == y2)
                 throw new ShapeException("Cannot create a line of length 0");
-            Point1 = new Point(x1, y1);
-            Point2 = new Point(x2, y2);
+            var Point1 = new Point(x1, y1);
+            var Point2 = new Point(x2, y2);
+            myPoints = new List<Point>();
+            myPoints.Add(Point1);
+            myPoints.Add(Point2);
         }
 
         /**
@@ -31,13 +35,17 @@ namespace Shapes
          */
         public Line(Point point1, Point point2)
         {
-            if (point1==null || point2==null)
+            if (point1 == null || point2 == null)
                 throw new ShapeException("Invalid point");
             if (point1.X == point2.X && point1.Y == point2.Y)
                 throw new ShapeException("Cannot create a line of length 0");
 
-            Point1 = point1;
-            Point2 = point2;
+            var Point1 = point1;
+            var Point2 = point2;
+            myPoints = new List<Point>();
+            myPoints.Add(Point1);
+            myPoints.Add(Point2);
+
         }
 
         /**
@@ -47,19 +55,21 @@ namespace Shapes
          * @param deltaY            The delta y-location by which the line should be moved -- must be a valid double
          * @throws ShapeException   Exception throw if any parameter is invalid
          */
-        public void Move(double deltaX, double deltaY)
-        {
-            Point1.Move(deltaX, deltaY);
-            Point2.Move(deltaX, deltaY);
-        }
+        //public void Move(double deltaX, double deltaY)
+        //{
+        //    Point1.Move(deltaX, deltaY);
+        //    Point2.Move(deltaX, deltaY);
+        //}
 
         /**
          * @return  The length of the line
          */
         public double ComputeLength()
         {
-            return Math.Sqrt(Math.Pow(Point2.X - Point1.X, 2) +
-                             Math.Pow(Point2.Y - Point1.Y, 2));
+            //return Math.Sqrt(Math.Pow(Point2.X - Point1.X, 2) +
+            //                 Math.Pow(Point2.Y - Point1.Y, 2));
+            return Math.Sqrt(Math.Pow(myPoints[1].X - myPoints[0].X, 2) +
+                             Math.Pow(myPoints[1].Y - myPoints[0].Y, 2));
         }
 
         /**
@@ -67,7 +77,9 @@ namespace Shapes
          */
         public double ComputeSlope()
         {
-            return (Point2.Y - Point1.Y) / (Point2.X - Point1.X);
+            //return (Point2.Y - Point1.Y) / (Point2.X - Point1.X);
+            return (myPoints[1].Y - myPoints[0].Y) / (myPoints[1].X - myPoints[0].X);
+            
         }
     }
 }

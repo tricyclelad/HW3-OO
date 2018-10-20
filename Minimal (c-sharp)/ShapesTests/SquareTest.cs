@@ -18,14 +18,14 @@ namespace ShapesTests
             var p6 = new Point(2, 1);
             var mySquare = new Square(0, 0, 0, 1, 1, 1, 1, 0);
 
-            Assert.AreEqual(0, mySquare.Vertex1.X, 0);
-            Assert.AreEqual(0, mySquare.Vertex1.Y, 0);
-            Assert.AreEqual(0, mySquare.Vertex2.X, 0);
-            Assert.AreEqual(1, mySquare.Vertex2.Y, 0);
-            Assert.AreEqual(1, mySquare.Vertex3.X, 0);
-            Assert.AreEqual(1, mySquare.Vertex3.Y, 0);
-            Assert.AreEqual(1, mySquare.Vertex4.X, 0);
-            Assert.AreEqual(0, mySquare.Vertex4.Y, 0);
+            Assert.AreEqual(0, mySquare.myPoints[0].X, 0);
+            Assert.AreEqual(0, mySquare.myPoints[0].Y, 0);
+            Assert.AreEqual(0, mySquare.myPoints[1].X, 0);
+            Assert.AreEqual(1, mySquare.myPoints[1].Y, 0);
+            Assert.AreEqual(1, mySquare.myPoints[2].X, 0);
+            Assert.AreEqual(1, mySquare.myPoints[2].Y, 0);
+            Assert.AreEqual(1, mySquare.myPoints[3].X, 0);
+            Assert.AreEqual(0, mySquare.myPoints[3].Y, 0);
             try
             {
                 mySquare = new Square(0, 0, 1, 1, 0, 0, 1, 1);
@@ -152,34 +152,34 @@ namespace ShapesTests
         public void TestMove()
         {
             Square mySquare = new Square(0, 0, 0, 1, 1, 1, 1, 0);
-            Assert.AreEqual(0, mySquare.Vertex1.X, 0);
-            Assert.AreEqual(0, mySquare.Vertex1.Y, 0);
-            Assert.AreEqual(0, mySquare.Vertex2.X, 0);
-            Assert.AreEqual(1, mySquare.Vertex2.Y, 0);
-            Assert.AreEqual(1, mySquare.Vertex3.X, 0);
-            Assert.AreEqual(1, mySquare.Vertex3.Y, 0);
-            Assert.AreEqual(1, mySquare.Vertex4.X, 0);
-            Assert.AreEqual(0, mySquare.Vertex4.Y, 0);
+            Assert.AreEqual(0, mySquare.myPoints[0].X, 0);
+            Assert.AreEqual(0, mySquare.myPoints[0].Y, 0);
+            Assert.AreEqual(0, mySquare.myPoints[1].X, 0);
+            Assert.AreEqual(1, mySquare.myPoints[1].Y, 0);
+            Assert.AreEqual(1, mySquare.myPoints[2].X, 0);
+            Assert.AreEqual(1, mySquare.myPoints[2].Y, 0);
+            Assert.AreEqual(1, mySquare.myPoints[3].X, 0);
+            Assert.AreEqual(0, mySquare.myPoints[3].Y, 0);
 
             mySquare.Move(10, 10);
-            Assert.AreEqual(10, mySquare.Vertex1.X, 0);
-            Assert.AreEqual(10, mySquare.Vertex1.Y, 0);
-            Assert.AreEqual(10, mySquare.Vertex2.X, 0);
-            Assert.AreEqual(11, mySquare.Vertex2.Y, 0);
-            Assert.AreEqual(11, mySquare.Vertex3.X, 0);
-            Assert.AreEqual(11, mySquare.Vertex3.Y, 0);
-            Assert.AreEqual(11, mySquare.Vertex4.X, 0);
-            Assert.AreEqual(10, mySquare.Vertex4.Y, 0);
+            Assert.AreEqual(10, mySquare.myPoints[0].X, 0);
+            Assert.AreEqual(10, mySquare.myPoints[0].Y, 0);
+            Assert.AreEqual(10, mySquare.myPoints[1].X, 0);
+            Assert.AreEqual(11, mySquare.myPoints[1].Y, 0);
+            Assert.AreEqual(11, mySquare.myPoints[2].X, 0);
+            Assert.AreEqual(11, mySquare.myPoints[2].Y, 0);
+            Assert.AreEqual(11, mySquare.myPoints[3].X, 0);
+            Assert.AreEqual(10, mySquare.myPoints[3].Y, 0);
 
             mySquare.Move(.123, .123);
-            Assert.AreEqual(10.123, mySquare.Vertex1.X, 0);
-            Assert.AreEqual(10.123, mySquare.Vertex1.Y, 0);
-            Assert.AreEqual(10.123, mySquare.Vertex2.X, 0);
-            Assert.AreEqual(11.123, mySquare.Vertex2.Y, 0);
-            Assert.AreEqual(11.123, mySquare.Vertex3.X, 0);
-            Assert.AreEqual(11.123, mySquare.Vertex3.Y, 0);
-            Assert.AreEqual(11.123, mySquare.Vertex4.X, 0);
-            Assert.AreEqual(10.123, mySquare.Vertex4.Y, 0);
+            Assert.AreEqual(10.123, mySquare.myPoints[0].X, 0);
+            Assert.AreEqual(10.123, mySquare.myPoints[0].Y, 0);
+            Assert.AreEqual(10.123, mySquare.myPoints[1].X, 0);
+            Assert.AreEqual(11.123, mySquare.myPoints[1].Y, 0);
+            Assert.AreEqual(11.123, mySquare.myPoints[2].X, 0);
+            Assert.AreEqual(11.123, mySquare.myPoints[2].Y, 0);
+            Assert.AreEqual(11.123, mySquare.myPoints[3].X, 0);
+            Assert.AreEqual(10.123, mySquare.myPoints[3].Y, 0);
             try
             {
                 mySquare.Move(double.PositiveInfinity, 1);

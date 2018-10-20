@@ -1,4 +1,0 @@
-C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\b\ShapesTests\bin\Debug\ShapesTests.dll
-C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\ShapesTests\Debug\ShapesTests.csproj.CoreCompileInputs.cache
-C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\ShapesTests\Debug\ShapesTests.csproj.CopyComplete
-C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\ShapesTests\Debug\ShapesTests.dll

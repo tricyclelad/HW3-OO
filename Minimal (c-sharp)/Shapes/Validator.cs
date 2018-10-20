@@ -18,7 +18,7 @@ namespace Shapes
         }
         public static bool AreLinesEqual(Line Line1, Line Line2)
         {
-            if (ArePointsEqual(Line1.Point1, Line2.Point1) && ArePointsEqual(Line1.Point2, Line2.Point2))
+            if (ArePointsEqual(Line1.myPoints[0], Line2.myPoints[0]) && ArePointsEqual(Line1.myPoints[1], Line2.myPoints[1]))
                 return true;
             return false;
 

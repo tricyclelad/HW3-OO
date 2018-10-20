@@ -52,6 +52,7 @@
     <Compile Include="Line.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Rectangle.cs" />
+    <Compile Include="Shape.cs" />
     <Compile Include="ShapeException.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Triangle.cs" />

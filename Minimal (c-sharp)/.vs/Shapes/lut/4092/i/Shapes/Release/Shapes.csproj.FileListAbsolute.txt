@@ -1,0 +1,4 @@
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\b\Shapes\bin\Release\Shapes.dll
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Release\Shapes.csproj.CoreCompileInputs.cache
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Release\Shapes.csproj.CopyComplete
+C:\Users\Camron Martinez\Desktop\Current OO Homework\HW1\HW1-OO\Minimal (c-sharp)\.vs\Shapes\lut\0\i\Shapes\Release\Shapes.dll
