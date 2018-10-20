@@ -8,9 +8,9 @@ namespace Shapes
 {
     public abstract class Shape2d
     {
-        protected string name;
+        public string name { get; protected set; }
 
-        protected string color;
+        public string color { get; protected set; }
         //protected double salary;
 
         public Shape2d(string name, string color)
