@@ -27,6 +27,11 @@ namespace ShapesTests
             Assert.AreEqual(_myShapes[1].GetData(), p12d.GetData());
             Assert.AreEqual(_myShapes[2].GetData(), p22d.GetData());
             Assert.AreEqual(_myShapes.Count, 3);
+            Assert.AreEqual(Jumble.ComputeArea(), myRectangle.ComputeArea());
+            Jumble.Add(rect2d);
+            
+            Assert.AreEqual(Jumble.ComputeArea(), 2 * myRectangle.ComputeArea());
+
 
             //rect2d.Add(p1);
             //rect2d.Add(p2);

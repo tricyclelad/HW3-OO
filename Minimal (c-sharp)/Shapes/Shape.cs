@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-     public class Shape : Shape2d
+     public abstract class Shape : Shape2d
     {
         public List<Point> myPoints;
         public Shape(string name, string color) : base(name, color) { }
@@ -32,6 +32,7 @@ namespace Shapes
         {
             return "Name: " + name + "\tcolor: " + color;
         }
+        //public abstract double ComputeArea();
         public void Move(double deltaX, double deltaY)
         {
             foreach (var point in myPoints)
@@ -39,5 +40,7 @@ namespace Shapes
                 point.Move(deltaX, deltaY);
             }
         }
+
+
     }
 }

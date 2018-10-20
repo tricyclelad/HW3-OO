@@ -31,7 +31,6 @@ namespace Shapes
         public override string GetData()
 
         {
-
             StringBuilder SBshape2d = new StringBuilder();
 
             foreach (Shape2d twoD in myShapes)
@@ -40,6 +39,16 @@ namespace Shapes
             }
 
             return SBshape2d.ToString();
+        }
+        public override double ComputeArea()
+        {
+            double total = 0;
+            foreach (Shape2d twoD in myShapes)
+            {
+                total += twoD.ComputeArea();
+
+            }
+            return total;
         }
 
     }

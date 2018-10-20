@@ -93,7 +93,7 @@ namespace Shapes
         //    Vertex3.Move(deltaX, deltaY);
         //}
 
-        public double ComputeArea()
+        public override double ComputeArea()
         {
             //Compute area using Heron's formula
             double semiperimiter = (Edge1.ComputeLength() + Edge2.ComputeLength() + Edge3.ComputeLength()) / 2;

@@ -175,7 +175,7 @@ namespace Shapes
                 Axis2.Move(deltaX, deltaY);
                 BindingRectangle.Move(deltaX, deltaY);
             }
-        public double ComputeArea()
+        public override double ComputeArea()
         {
             return Math.PI * Axis1.ComputeLength() / 2 * Axis2.ComputeLength() / 2;
         }

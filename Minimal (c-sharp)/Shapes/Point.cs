@@ -61,5 +61,9 @@
             return new Point(this.name, this.color, X, Y);
         }
 
-}
+        public override double ComputeArea()
+        {
+            return 0;
+        }
+    }
 }

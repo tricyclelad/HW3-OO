@@ -72,7 +72,7 @@ namespace Shapes
         /**
          * @return  The area of the circle.
          */
-        public double ComputeArea()
+        public override double ComputeArea()
         {
             return Math.PI * Math.Pow(Radius, 2);
         }

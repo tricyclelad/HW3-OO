@@ -81,7 +81,7 @@ namespace Shapes
         //    Vertex4.Move(deltaX, deltaY);
         //}
 
-        public double ComputeArea()
+        public override double ComputeArea()
         {
             //Compute area using Heron's formula
 

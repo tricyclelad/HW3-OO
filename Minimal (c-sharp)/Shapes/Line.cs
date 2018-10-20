@@ -5,6 +5,10 @@ namespace Shapes
 {
     public class Line : Shape
     {
+        public override double ComputeArea()
+        {
+            return 0;
+        }
         //public Point Point1 { get; private set; }
         //public Point Point2 { get; private set; }
 
