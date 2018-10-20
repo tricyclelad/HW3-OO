@@ -10,18 +10,18 @@ namespace ShapesTests
         [TestMethod]
         public void TestValidConstruction()
         {
-            var p1 = new Point(1,2);
-            var p2 = new Point(4, 10);
+            var p1 = new Point("P1","Red",1,2);
+            var p2 = new Point("P2","Blue",4, 10);
 
 
-            var myLine = new Line(p1, p2);
+            var myLine = new Line("Line1", "Black", p1, p2);
            
             Assert.AreSame(p1, myLine.myPoints[0]);
             Assert.AreSame(p2, myLine.myPoints[1]);
 
             try
             {
-                myLine = new Line(p1, p1);
+                myLine = new Line("null", "Null", p1, p1);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -33,13 +33,13 @@ namespace ShapesTests
 //            Assert.AreSame(p1, myLine.Point1);
 //            Assert.AreSame(p1, myLine.Point2);
 
-            p1 = new Point(1.4,2.5);
-            p2 = new Point(4.6, 10.7);
-            myLine = new Line(p1, p2);
+            p1 = new Point("null","null",1.4,2.5);
+            p2 = new Point("null","null",4.6, 10.7);
+            myLine = new Line("null","null",p1, p2);
             Assert.AreSame(p1, myLine.myPoints[0]);
             Assert.AreSame(p2, myLine.myPoints[1]);
 
-            myLine = new Line(1, 3.33, 4.444, 5.5555);
+            myLine = new Line("null","null",1, 3.33, 4.444, 5.5555);
             Assert.AreEqual(1, myLine.myPoints[0].X, 0);
             Assert.AreEqual(3.33, myLine.myPoints[0].Y, 0);
             Assert.AreEqual(4.444, myLine.myPoints[1].X, 0);
@@ -49,11 +49,11 @@ namespace ShapesTests
         [TestMethod]
         public void TestInvalidConstruction()
         {
-            var p1 = new Point(1,2);
-            var p2 = new Point(4, 10);
+            var p1 = new Point("null","null",1,2);
+            var p2 = new Point("null","null",4, 10);
 
             try {
-                new Line(p1, null);
+                new Line("null","null",p1, null);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -62,7 +62,7 @@ namespace ShapesTests
             }
 
             try {
-                new Line(null, p2);
+                new Line("null","null",null, p2);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -74,7 +74,7 @@ namespace ShapesTests
         [TestMethod]
         public void TestMove()
         {
-            var myLine = new Line(1, 2, 4, 10);
+            var myLine = new Line("null","null",1, 2, 4, 10);
 
             myLine.Move(3, 4);
             Assert.AreEqual(4, myLine.myPoints[0].X, 0);
@@ -99,11 +99,11 @@ namespace ShapesTests
         public void TestComputeLength()
         {
 
-            var myLine = new Line(1, 2, 4, 10);
+            var myLine = new Line("null","null",1, 2, 4, 10);
             Assert.AreEqual(8.544, myLine.ComputeLength(), 0.001);
             //Attempt to create a line with 0 length
             try {
-                myLine = new Line(1, 2, 1, 2);
+                myLine = new Line("null","null",1, 2, 1, 2);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -113,30 +113,30 @@ namespace ShapesTests
 
             //Assert.AreEqual(Math.Sqrt(0), myLine.ComputeLength(), 0);
 
-            myLine = new Line(3, -2, -4, 10);
+            myLine = new Line("null","null",3, -2, -4, 10);
             Assert.AreEqual(13.892, myLine.ComputeLength(), 0.001);
         }
 
         [TestMethod]
         public void TestComputeSlope() { 
-            var myLine = new Line(2, 2, 4, 10);
+            var myLine = new Line("null","null",2, 2, 4, 10);
             Assert.AreEqual(4, myLine.ComputeSlope(), 0.1);
 
-            myLine = new Line(2, 2, 10, 4);
+            myLine = new Line("null","null",2, 2, 10, 4);
             Assert.AreEqual(0.25, myLine.ComputeSlope(), 0.1);
 
-            myLine = new Line(2, 2, 4, 0);
+            myLine = new Line("null","null",2, 2, 4, 0);
             Assert.AreEqual(-1, myLine.ComputeSlope(), 0.1);
 
-            myLine = new Line(2, 2, 2, 4);
+            myLine = new Line("null","null",2, 2, 2, 4);
             Assert.AreEqual(double.PositiveInfinity, myLine.ComputeSlope(), 0.1);
 
-            myLine = new Line(2, 4, 2, 2);
+            myLine = new Line("null","null",2, 4, 2, 2);
             Assert.AreEqual(double.NegativeInfinity, myLine.ComputeSlope(), 0.1);
 
             try
             {
-                myLine = new Line(2, 2, 2, 2);
+                myLine = new Line("null","null",2, 2, 2, 2);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
