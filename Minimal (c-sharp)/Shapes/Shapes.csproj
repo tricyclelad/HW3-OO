@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="CompositeShape.cs" />
     <Compile Include="EmbeddedPicture.cs" />
+    <Compile Include="EmbeddedPictureFactory.cs" />
     <Compile Include="Shape2d.cs" />
     <Compile Include="Ellipse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

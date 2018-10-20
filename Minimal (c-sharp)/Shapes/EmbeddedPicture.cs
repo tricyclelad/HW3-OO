@@ -14,9 +14,13 @@ namespace Shapes
         Double Width, Height;
         List<Point> myEmbeddedPicturePoints;
         
-        public EmbeddedPicture(string _name, string _color, Bitmap _storedImage):base(_name, _color)
+        public EmbeddedPicture(string _name, string _color, Bitmap _storedImage, double width, double height, List<Point> _picturePoints):base(_name, _color)
         {
-            storedImage = _storedImage; 
+            storedImage = _storedImage;
+            myEmbeddedPicturePoints = _picturePoints;
+            Width = width;
+            Height = height;
+
         }
         public override void Add(Shape2d _shape2d)
         {
