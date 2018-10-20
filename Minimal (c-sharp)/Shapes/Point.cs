@@ -11,8 +11,6 @@
             Validator.ValidateDouble(y, "Invalid y-location point");
             X = x;
             Y = y;
-            this.name = _name;
-            this.color = _color;
         }
 
         /**

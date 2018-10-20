@@ -27,8 +27,8 @@ namespace Shapes
             this.color = _color;
             if (x1 == x2 && y1 == y2)
                 throw new ShapeException("Cannot create a line of length 0");
-            var Point1 = new Point(x1, y1);
-            var Point2 = new Point(x2, y2);
+            var Point1 = new Point(_name+"'s Point1", _color, x1, y1);
+            var Point2 = new Point(_name+"'s Point2", _color, x2, y2);
             myPoints = new List<Point>();
             myPoints.Add(Point1);
             myPoints.Add(Point2);
