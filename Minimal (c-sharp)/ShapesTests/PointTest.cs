@@ -9,20 +9,22 @@ namespace ShapesTests
         [TestMethod]
         public void TestValidConstruction()
         {
-            var p1 = new Point(1, 2);
+            var p1 = new Point("Point1", "Red", 1, 2);
             Assert.AreEqual(1, p1.X, 0);
             Assert.AreEqual(2, p1.Y, 0);
+            Assert.AreEqual(p1.GetData(), "Name: " + "Point1" + "\tcolor: " + "Red" );
 
-            p1 = new Point(1.111, 2.222);
+            p1 = new Point("Point2", "Blue", 1.111, 2.222);
             Assert.AreEqual(1.111, p1.X, 0);
             Assert.AreEqual(2.222, p1.Y, 0);
+            Assert.AreEqual(p1.GetData(), "Name: " + "Point2" + "\tcolor: " + "Blue" );
         }
 
         [TestMethod]
         public void TestInvalidConstruction() {
             try
             {
-                new Point(1, double.PositiveInfinity);
+                new Point("null","null",1, double.PositiveInfinity);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -32,7 +34,7 @@ namespace ShapesTests
 
             try
             {
-                new Point(1, double.NegativeInfinity);
+                new Point("null","null",1, double.NegativeInfinity);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -42,7 +44,7 @@ namespace ShapesTests
 
             try
             {
-                new Point(1, double.NaN);
+                new Point("null","null",1, double.NaN);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -52,7 +54,7 @@ namespace ShapesTests
 
             try
             {
-                new Point(double.PositiveInfinity, 1);
+                new Point("null","null",double.PositiveInfinity, 1);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -62,7 +64,7 @@ namespace ShapesTests
 
             try
             {
-                new Point(double.NegativeInfinity, 1);
+                new Point("null","null",double.NegativeInfinity, 1);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -72,7 +74,7 @@ namespace ShapesTests
 
             try
             {
-                new Point(double.NaN, 1);
+                new Point("null","null",double.NaN, 1);
                 Assert.Fail("Expected exception not thrown");
             }
             catch (ShapeException e)
@@ -83,7 +85,7 @@ namespace ShapesTests
 
         [TestMethod]
         public void TestMoveX() {
-            Point p1 = new Point(1, 2);
+            Point p1 = new Point("null","null",1, 2);
 
             p1.MoveX(10);
             Assert.AreEqual(11, p1.X, 0);
@@ -135,7 +137,7 @@ namespace ShapesTests
 
         [TestMethod]
         public void TestMoveY() {
-            Point p1 = new Point(1, 2);
+            Point p1 = new Point("null","null",1, 2);
 
             p1.MoveY(10);
             Assert.AreEqual(1, p1.X, 0);
@@ -186,7 +188,7 @@ namespace ShapesTests
 
         [TestMethod]
         public void TestMove() {
-            Point p1 = new Point(1, 2);
+            Point p1 = new Point("null","null",1, 2);
 
             p1.Move(10, 20);
             Assert.AreEqual(11, p1.X, 0);
@@ -267,7 +269,7 @@ namespace ShapesTests
 
         [TestMethod]
         public void TestCopy() {
-            Point p1 = new Point(-123.45, -23.45);
+            Point p1 = new Point("Point1","Yellow",-123.45, -23.45);
             Assert.AreEqual(-123.45, p1.X, 0);
             Assert.AreEqual(-23.45, p1.Y, 0);
 
@@ -275,6 +277,8 @@ namespace ShapesTests
             Assert.AreNotSame(p1, p2);
             Assert.AreEqual(p1.X, p2.X, 0);
             Assert.AreEqual(p1.Y, p2.Y, 0);
+            Assert.AreEqual(p1.GetData(), p2.GetData());
+
         }
     }
 }
