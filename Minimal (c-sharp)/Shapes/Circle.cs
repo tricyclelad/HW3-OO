@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Shapes
 {
-    public class Circle
+    public class Circle: Shape
     {
-        public Point Center { get; private set; }
+        //public Point Center { get; private set; }
         public double Radius { get; private set;  }
 
         /**
@@ -18,7 +19,9 @@ namespace Shapes
         public Circle(double x, double y, double radius)
         {
             Validator.ValidatePositiveDouble(radius, "Invalid radius");
-            Center = new Point(x, y);
+            var Center = new Point(x, y);
+            myPoints = new List<Point>();
+            myPoints.Add(Center);
             Radius = radius;
         }
 
@@ -35,7 +38,9 @@ namespace Shapes
             if (center == null)
                 throw new ShapeException("Invalid center point");
 
-            Center = center;
+            var Center = center;
+            myPoints = new List<Point>();
+            myPoints.Add(Center);
             Radius = radius;
         }
 
@@ -45,10 +50,10 @@ namespace Shapes
          * @param deltaY            a delta change for the y-location of center of the circle
          * @throws ShapeException   Exception thrown if either the delta x or y are not valid doubles
          */
-        public void Move(double deltaX, double deltaY)
-        {
-            Center.Move(deltaX, deltaY);
-        }
+        //public void Move(double deltaX, double deltaY)
+        //{
+        //    Center.Move(deltaX, deltaY);
+        //}
 
         /**
          * Scale the circle

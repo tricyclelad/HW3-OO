@@ -11,13 +11,13 @@ namespace ShapesTests
         public void TestValidConstruction()
         {
             var circle = new Circle(1, 3, 2.5);
-            Assert.AreEqual(1, circle.Center.X);
-            Assert.AreEqual(3, circle.Center.Y);
+            Assert.AreEqual(1, circle.myPoints[0].X);
+            Assert.AreEqual(3, circle.myPoints[0].Y);
             Assert.AreEqual(2.5, circle.Radius);
 
             circle = new Circle(new Point(1.23, 4.56), 7.89);
-            Assert.AreEqual(1.23, circle.Center.X);
-            Assert.AreEqual(4.56, circle.Center.Y);
+            Assert.AreEqual(1.23, circle.myPoints[0].X);
+            Assert.AreEqual(4.56, circle.myPoints[0].Y);
             Assert.AreEqual(7.89, circle.Radius);
         }
 
@@ -158,28 +158,28 @@ namespace ShapesTests
         [TestMethod]
         public void TestMove() {
             Circle myCircle = new Circle(1, 2, 5);
-            Assert.AreEqual(1, myCircle.Center.X, 0);
-            Assert.AreEqual(2, myCircle.Center.Y, 0);
+            Assert.AreEqual(1, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(2, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(5, myCircle.Radius, 0);
 
             myCircle.Move(3, 4);
-            Assert.AreEqual(4, myCircle.Center.X, 0);
-            Assert.AreEqual(6, myCircle.Center.Y, 0);
+            Assert.AreEqual(4, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(6, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(5, myCircle.Radius, 0);
 
             myCircle.Move(0.123, 0.456);
-            Assert.AreEqual(4.123, myCircle.Center.X, 0);
-            Assert.AreEqual(6.456, myCircle.Center.Y, 0);
+            Assert.AreEqual(4.123, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(6.456, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(5, myCircle.Radius, 0);
 
             myCircle.Move(-0.123, -0.456);
-            Assert.AreEqual(4, myCircle.Center.X, 0);
-            Assert.AreEqual(6, myCircle.Center.Y, 0);
+            Assert.AreEqual(4, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(6, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(5, myCircle.Radius, 0);
 
             myCircle.Move(-12, -26);
-            Assert.AreEqual(-8, myCircle.Center.X, 0);
-            Assert.AreEqual(-20, myCircle.Center.Y, 0);
+            Assert.AreEqual(-8, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(-20, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(5, myCircle.Radius, 0);
 
             try
@@ -246,18 +246,18 @@ namespace ShapesTests
         [TestMethod]
         public void TestScale() {
             Circle myCircle = new Circle(1, 2, 5);
-            Assert.AreEqual(1, myCircle.Center.X, 0);
-            Assert.AreEqual(2, myCircle.Center.Y, 0);
+            Assert.AreEqual(1, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(2, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(5, myCircle.Radius, 0);
 
             myCircle.Scale(3);
-            Assert.AreEqual(1, myCircle.Center.X, 0);
-            Assert.AreEqual(2, myCircle.Center.Y, 0);
+            Assert.AreEqual(1, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(2, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(15, myCircle.Radius, 0);
 
             myCircle.Scale(0.2);
-            Assert.AreEqual(1, myCircle.Center.X, 0);
-            Assert.AreEqual(2, myCircle.Center.Y, 0);
+            Assert.AreEqual(1, myCircle.myPoints[0].X, 0);
+            Assert.AreEqual(2, myCircle.myPoints[0].Y, 0);
             Assert.AreEqual(3, myCircle.Radius, 0);
 
             try
