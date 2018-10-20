@@ -19,14 +19,14 @@ namespace ShapesTests
             //var myRectangle = new Rectangle(p1,p2,p3,p4);
             var myRectangle = new Rectangle(0, 0, 0, 1, 1, 1, 1, 0);
 
-            Assert.AreEqual(0, myRectangle.Vertex1.X, 0);
-            Assert.AreEqual(0, myRectangle.Vertex1.Y, 0);
-            Assert.AreEqual(0, myRectangle.Vertex2.X, 0);
-            Assert.AreEqual(1, myRectangle.Vertex2.Y, 0);
-            Assert.AreEqual(1, myRectangle.Vertex3.X, 0);
-            Assert.AreEqual(1, myRectangle.Vertex3.Y, 0);
-            Assert.AreEqual(1, myRectangle.Vertex4.X, 0);
-            Assert.AreEqual(0, myRectangle.Vertex4.Y, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[0].X, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[0].Y, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[1].X, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[1].Y, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[2].X, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[2].Y, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[3].X, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[3].Y, 0);
             try
             {
                 myRectangle = new Rectangle(0, 0, 1, 1, 0, 0, 1, 1);
@@ -106,34 +106,34 @@ namespace ShapesTests
         public void TestMove()
         {
             Rectangle myRectangle = new Rectangle(0, 0, 0, 1, 1, 1, 1, 0);
-            Assert.AreEqual(0, myRectangle.Vertex1.X, 0);
-            Assert.AreEqual(0, myRectangle.Vertex1.Y, 0);
-            Assert.AreEqual(0, myRectangle.Vertex2.X, 0);
-            Assert.AreEqual(1, myRectangle.Vertex2.Y, 0);
-            Assert.AreEqual(1, myRectangle.Vertex3.X, 0);
-            Assert.AreEqual(1, myRectangle.Vertex3.Y, 0);
-            Assert.AreEqual(1, myRectangle.Vertex4.X, 0);
-            Assert.AreEqual(0, myRectangle.Vertex4.Y, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[0].X, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[0].Y, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[1].X, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[1].Y, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[2].X, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[2].Y, 0);
+            Assert.AreEqual(1, myRectangle.myPoints[3].X, 0);
+            Assert.AreEqual(0, myRectangle.myPoints[3].Y, 0);
 
             myRectangle.Move(10, 10);
-            Assert.AreEqual(10, myRectangle.Vertex1.X, 0);
-            Assert.AreEqual(10, myRectangle.Vertex1.Y, 0);
-            Assert.AreEqual(10, myRectangle.Vertex2.X, 0);
-            Assert.AreEqual(11, myRectangle.Vertex2.Y, 0);
-            Assert.AreEqual(11, myRectangle.Vertex3.X, 0);
-            Assert.AreEqual(11, myRectangle.Vertex3.Y, 0);
-            Assert.AreEqual(11, myRectangle.Vertex4.X, 0);
-            Assert.AreEqual(10, myRectangle.Vertex4.Y, 0);
+            Assert.AreEqual(10, myRectangle.myPoints[0].X, 0);
+            Assert.AreEqual(10, myRectangle.myPoints[0].Y, 0);
+            Assert.AreEqual(10, myRectangle.myPoints[1].X, 0);
+            Assert.AreEqual(11, myRectangle.myPoints[1].Y, 0);
+            Assert.AreEqual(11, myRectangle.myPoints[2].X, 0);
+            Assert.AreEqual(11, myRectangle.myPoints[2].Y, 0);
+            Assert.AreEqual(11, myRectangle.myPoints[3].X, 0);
+            Assert.AreEqual(10, myRectangle.myPoints[3].Y, 0);
 
             myRectangle.Move(.123, .123);
-            Assert.AreEqual(10.123, myRectangle.Vertex1.X, 0);
-            Assert.AreEqual(10.123, myRectangle.Vertex1.Y, 0);
-            Assert.AreEqual(10.123, myRectangle.Vertex2.X, 0);
-            Assert.AreEqual(11.123, myRectangle.Vertex2.Y, 0);
-            Assert.AreEqual(11.123, myRectangle.Vertex3.X, 0);
-            Assert.AreEqual(11.123, myRectangle.Vertex3.Y, 0);
-            Assert.AreEqual(11.123, myRectangle.Vertex4.X, 0);
-            Assert.AreEqual(10.123, myRectangle.Vertex4.Y, 0);
+            Assert.AreEqual(10.123, myRectangle.myPoints[0].X, 0);
+            Assert.AreEqual(10.123, myRectangle.myPoints[0].Y, 0);
+            Assert.AreEqual(10.123, myRectangle.myPoints[1].X, 0);
+            Assert.AreEqual(11.123, myRectangle.myPoints[1].Y, 0);
+            Assert.AreEqual(11.123, myRectangle.myPoints[2].X, 0);
+            Assert.AreEqual(11.123, myRectangle.myPoints[2].Y, 0);
+            Assert.AreEqual(11.123, myRectangle.myPoints[3].X, 0);
+            Assert.AreEqual(10.123, myRectangle.myPoints[3].Y, 0);
             try
             {
                 myRectangle.Move(double.PositiveInfinity, 1);

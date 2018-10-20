@@ -44,14 +44,14 @@ namespace ShapesTests
             Assert.AreEqual(_Axis2.myPoints[1].Y, Ellipse.Axis2.myPoints[1].Y);
 
             Rectangle _BindingRectangle = new Rectangle(-2, -1, -2, 1, 2, 1, 2, -1);
-            Assert.AreEqual(_BindingRectangle.Vertex1.X, Ellipse.BindingRectangle.Vertex1.X);
-            Assert.AreEqual(_BindingRectangle.Vertex1.Y, Ellipse.BindingRectangle.Vertex1.Y);
-            Assert.AreEqual(_BindingRectangle.Vertex2.X, Ellipse.BindingRectangle.Vertex2.X);
-            Assert.AreEqual(_BindingRectangle.Vertex2.Y, Ellipse.BindingRectangle.Vertex2.Y);
-            Assert.AreEqual(_BindingRectangle.Vertex3.X, Ellipse.BindingRectangle.Vertex3.X);
-            Assert.AreEqual(_BindingRectangle.Vertex3.Y, Ellipse.BindingRectangle.Vertex3.Y);
-            Assert.AreEqual(_BindingRectangle.Vertex4.X, Ellipse.BindingRectangle.Vertex4.X);
-            Assert.AreEqual(_BindingRectangle.Vertex4.Y, Ellipse.BindingRectangle.Vertex4.Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[0].X, Ellipse.BindingRectangle.myPoints[0].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[0].Y, Ellipse.BindingRectangle.myPoints[0].Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[1].X, Ellipse.BindingRectangle.myPoints[1].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[1].Y, Ellipse.BindingRectangle.myPoints[1].Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[2].X, Ellipse.BindingRectangle.myPoints[2].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[2].Y, Ellipse.BindingRectangle.myPoints[2].Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[3].X, Ellipse.BindingRectangle.myPoints[3].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[3].Y, Ellipse.BindingRectangle.myPoints[3].Y);
 
             myRectangle = new Rectangle(-1,-2,-1,2,1,2,1,-2);
             Ellipse = new Ellipse(myRectangle);
@@ -100,14 +100,14 @@ namespace ShapesTests
             Assert.AreEqual(_Axis2.myPoints[1].Y, Ellipse.Axis2.myPoints[1].Y);
 
             Rectangle _BindingRectangle = new Rectangle(-2, -1, -2, 1, 2, 1, 2, -1);
-            Assert.AreEqual(_BindingRectangle.Vertex1.X, Ellipse.BindingRectangle.Vertex1.X);
-            Assert.AreEqual(_BindingRectangle.Vertex1.Y, Ellipse.BindingRectangle.Vertex1.Y);
-            Assert.AreEqual(_BindingRectangle.Vertex2.X, Ellipse.BindingRectangle.Vertex2.X);
-            Assert.AreEqual(_BindingRectangle.Vertex2.Y, Ellipse.BindingRectangle.Vertex2.Y);
-            Assert.AreEqual(_BindingRectangle.Vertex3.X, Ellipse.BindingRectangle.Vertex3.X);
-            Assert.AreEqual(_BindingRectangle.Vertex3.Y, Ellipse.BindingRectangle.Vertex3.Y);
-            Assert.AreEqual(_BindingRectangle.Vertex4.X, Ellipse.BindingRectangle.Vertex4.X);
-            Assert.AreEqual(_BindingRectangle.Vertex4.Y, Ellipse.BindingRectangle.Vertex4.Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[0].X, Ellipse.BindingRectangle.myPoints[0].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[0].Y, Ellipse.BindingRectangle.myPoints[0].Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[1].X, Ellipse.BindingRectangle.myPoints[1].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[1].Y, Ellipse.BindingRectangle.myPoints[1].Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[2].X, Ellipse.BindingRectangle.myPoints[2].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[2].Y, Ellipse.BindingRectangle.myPoints[2].Y);
+            Assert.AreEqual(_BindingRectangle.myPoints[3].X, Ellipse.BindingRectangle.myPoints[3].X);
+            Assert.AreEqual(_BindingRectangle.myPoints[3].Y, Ellipse.BindingRectangle.myPoints[3].Y);
 
             _Vertex1 = new Point(-1,-2);
             _Vertex2 = new Point(-1,2);
@@ -157,14 +157,14 @@ namespace ShapesTests
             Assert.AreEqual(_Axis2.myPoints[1].Y, MyEllipse.Axis2.myPoints[1].Y);
 
             myRectangle.Move(1, 1);
-            Assert.AreEqual(myRectangle.Vertex1.X, MyEllipse.BindingRectangle.Vertex1.X);
-            Assert.AreEqual(myRectangle.Vertex1.Y, MyEllipse.BindingRectangle.Vertex1.Y);
-            Assert.AreEqual(myRectangle.Vertex2.X, MyEllipse.BindingRectangle.Vertex2.X);
-            Assert.AreEqual(myRectangle.Vertex2.Y, MyEllipse.BindingRectangle.Vertex2.Y);
-            Assert.AreEqual(myRectangle.Vertex3.X, MyEllipse.BindingRectangle.Vertex3.X);
-            Assert.AreEqual(myRectangle.Vertex3.Y, MyEllipse.BindingRectangle.Vertex3.Y);
-            Assert.AreEqual(myRectangle.Vertex4.X, MyEllipse.BindingRectangle.Vertex4.X);
-            Assert.AreEqual(myRectangle.Vertex4.Y, MyEllipse.BindingRectangle.Vertex4.Y);
+            Assert.AreEqual(myRectangle.myPoints[0].X, MyEllipse.BindingRectangle.myPoints[0].X);
+            Assert.AreEqual(myRectangle.myPoints[0].Y, MyEllipse.BindingRectangle.myPoints[0].Y);
+            Assert.AreEqual(myRectangle.myPoints[1].X, MyEllipse.BindingRectangle.myPoints[1].X);
+            Assert.AreEqual(myRectangle.myPoints[1].Y, MyEllipse.BindingRectangle.myPoints[1].Y);
+            Assert.AreEqual(myRectangle.myPoints[2].X, MyEllipse.BindingRectangle.myPoints[2].X);
+            Assert.AreEqual(myRectangle.myPoints[2].Y, MyEllipse.BindingRectangle.myPoints[2].Y);
+            Assert.AreEqual(myRectangle.myPoints[3].X, MyEllipse.BindingRectangle.myPoints[3].X);
+            Assert.AreEqual(myRectangle.myPoints[3].Y, MyEllipse.BindingRectangle.myPoints[3].Y);
         }
         [TestMethod]
         public void TestComputeArea()

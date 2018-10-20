@@ -24,12 +24,12 @@ namespace Shapes
         public Ellipse(Rectangle _BindingRectangle)
         {
             BindingRectangle = _BindingRectangle;
-            Line Diagonal = new Line(BindingRectangle.Vertex1, BindingRectangle.Vertex3);
+            Line Diagonal = new Line(BindingRectangle.myPoints[0], BindingRectangle.myPoints[2]);
             Point CenterOfDiagonal = new Point(((Diagonal.myPoints[0].X + Diagonal.myPoints[1].X)/2), ((Diagonal.myPoints[0].Y + Diagonal.myPoints[1].Y)/2));
-            Point CenterOfRectangleEdge1 = new Point(((BindingRectangle.Vertex1.X + BindingRectangle.Vertex2.X)/2), ((BindingRectangle.Vertex1.Y + BindingRectangle.Vertex2.Y)/2));
-            Point CenterOfRectangleEdge2 = new Point(((BindingRectangle.Vertex2.X + BindingRectangle.Vertex3.X)/2), ((BindingRectangle.Vertex2.Y + BindingRectangle.Vertex3.Y)/2));
-            Point CenterOfRectangleEdge3 = new Point(((BindingRectangle.Vertex3.X + BindingRectangle.Vertex4.X)/2), ((BindingRectangle.Vertex3.Y + BindingRectangle.Vertex4.Y)/2));
-            Point CenterOfRectangleEdge4 = new Point(((BindingRectangle.Vertex4.X + BindingRectangle.Vertex1.X)/2), ((BindingRectangle.Vertex4.Y + BindingRectangle.Vertex1.Y)/2));
+            Point CenterOfRectangleEdge1 = new Point(((BindingRectangle.myPoints[0].X + BindingRectangle.myPoints[1].X)/2), ((BindingRectangle.myPoints[0].Y + BindingRectangle.myPoints[1].Y)/2));
+            Point CenterOfRectangleEdge2 = new Point(((BindingRectangle.myPoints[1].X + BindingRectangle.myPoints[2].X)/2), ((BindingRectangle.myPoints[1].Y + BindingRectangle.myPoints[2].Y)/2));
+            Point CenterOfRectangleEdge3 = new Point(((BindingRectangle.myPoints[2].X + BindingRectangle.myPoints[3].X)/2), ((BindingRectangle.myPoints[2].Y + BindingRectangle.myPoints[3].Y)/2));
+            Point CenterOfRectangleEdge4 = new Point(((BindingRectangle.myPoints[3].X + BindingRectangle.myPoints[0].X)/2), ((BindingRectangle.myPoints[3].Y + BindingRectangle.myPoints[0].Y)/2));
 
             Line _Axis1 = new Line(CenterOfRectangleEdge1, CenterOfRectangleEdge3);
             Line _Axis2 = new Line(CenterOfRectangleEdge2, CenterOfRectangleEdge4);
@@ -97,12 +97,12 @@ namespace Shapes
         {
             Rectangle _BindingRectangle = new Rectangle(_Vertex1, _Vertex2, _Vertex3, _Vertex4);
             BindingRectangle = _BindingRectangle;
-            Line Diagonal = new Line(BindingRectangle.Vertex1, BindingRectangle.Vertex3);
+            Line Diagonal = new Line(BindingRectangle.myPoints[0], BindingRectangle.myPoints[2]);
             Point CenterOfDiagonal = new Point(((Diagonal.myPoints[0].X + Diagonal.myPoints[1].X) / 2), ((Diagonal.myPoints[0].Y + Diagonal.myPoints[1].Y) / 2));
-            Point CenterOfRectangleEdge1 = new Point(((BindingRectangle.Vertex1.X + BindingRectangle.Vertex2.X) / 2), ((BindingRectangle.Vertex1.Y + BindingRectangle.Vertex2.Y) / 2));
-            Point CenterOfRectangleEdge2 = new Point(((BindingRectangle.Vertex2.X + BindingRectangle.Vertex3.X) / 2), ((BindingRectangle.Vertex2.Y + BindingRectangle.Vertex3.Y) / 2));
-            Point CenterOfRectangleEdge3 = new Point(((BindingRectangle.Vertex3.X + BindingRectangle.Vertex4.X) / 2), ((BindingRectangle.Vertex3.Y + BindingRectangle.Vertex4.Y) / 2));
-            Point CenterOfRectangleEdge4 = new Point(((BindingRectangle.Vertex4.X + BindingRectangle.Vertex1.X) / 2), ((BindingRectangle.Vertex4.Y + BindingRectangle.Vertex1.Y) / 2));
+            Point CenterOfRectangleEdge1 = new Point(((BindingRectangle.myPoints[0].X + BindingRectangle.myPoints[1].X) / 2), ((BindingRectangle.myPoints[0].Y + BindingRectangle.myPoints[1].Y) / 2));
+            Point CenterOfRectangleEdge2 = new Point(((BindingRectangle.myPoints[1].X + BindingRectangle.myPoints[2].X) / 2), ((BindingRectangle.myPoints[1].Y + BindingRectangle.myPoints[2].Y) / 2));
+            Point CenterOfRectangleEdge3 = new Point(((BindingRectangle.myPoints[2].X + BindingRectangle.myPoints[3].X) / 2), ((BindingRectangle.myPoints[2].Y + BindingRectangle.myPoints[3].Y) / 2));
+            Point CenterOfRectangleEdge4 = new Point(((BindingRectangle.myPoints[3].X + BindingRectangle.myPoints[0].X) / 2), ((BindingRectangle.myPoints[3].Y + BindingRectangle.myPoints[0].Y) / 2));
 
             Line _Axis1 = new Line(CenterOfRectangleEdge1, CenterOfRectangleEdge3);
             Line _Axis2 = new Line(CenterOfRectangleEdge2, CenterOfRectangleEdge4);
