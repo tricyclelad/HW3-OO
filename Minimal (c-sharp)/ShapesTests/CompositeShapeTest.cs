@@ -31,13 +31,16 @@ namespace ShapesTests
             Jumble.Add(rect2d);
             
             Assert.AreEqual(Jumble.ComputeArea(), 2 * myRectangle.ComputeArea());
-
-
-            //rect2d.Add(p1);
-            //rect2d.Add(p2);
-            //rect2d.Remove(p1);
-            //rect2d.Remove(p2);
-
+            Jumble.Remove(rect2d);
+            Assert.AreEqual(_myShapes.Count, 3);
+            Jumble.Remove(rect2d);
+            Assert.AreEqual(_myShapes.Count, 2);
+            Jumble.Remove(rect2d);
+            Assert.AreEqual(_myShapes.Count, 2);
+            Jumble.Remove(p12d);
+            Assert.AreEqual(_myShapes.Count, 1);
+            Jumble.Remove(p22d);
+            Assert.AreEqual(_myShapes.Count, 0);
             //Shape2d = 
         }
     }
