@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public class Triangle
+    public class Triangle : Shape
     {
-        public Point Vertex1 { get; private set; }
-        public Point Vertex2 { get; private set; }
-        public Point Vertex3 { get; private set; }
+        //public Point Vertex1 { get; private set; }
+        //public Point Vertex2 { get; private set; }
+        //public Point Vertex3 { get; private set; }
         public Line Edge1 { get; private set; }
         public Line Edge2 { get; private set; }
         public Line Edge3 { get; private set; }
@@ -18,9 +18,13 @@ namespace Shapes
 
         public Triangle(double x1, double y1, double x2, double y2, double x3, double y3)
         {
-            Vertex1 = new Point(x1, y1);
-            Vertex2 = new Point(x2, y2);
-            Vertex3 = new Point(x3, y3);
+            var Vertex1 = new Point(x1, y1);
+            var Vertex2 = new Point(x2, y2);
+            var Vertex3 = new Point(x3, y3);
+            myPoints = new List<Point>();
+            myPoints.Add(Vertex1);
+            myPoints.Add(Vertex2);
+            myPoints.Add(Vertex3);
 
             if(AreVerticesEqual(Vertex1, Vertex2, Vertex3))
             {
@@ -50,9 +54,13 @@ namespace Shapes
         public Triangle(Point _Vertex1, Point _Vertex2, Point _Vertex3)
         {
             
-            Vertex1 = _Vertex1;
-            Vertex2 = _Vertex2;
-            Vertex3 = _Vertex3;
+            var Vertex1 = _Vertex1;
+            var Vertex2 = _Vertex2;
+            var Vertex3 = _Vertex3;
+            myPoints = new List<Point>();
+            myPoints.Add(Vertex1);
+            myPoints.Add(Vertex2);
+            myPoints.Add(Vertex3);
 
             if(AreVerticesEqual(_Vertex1, _Vertex2, _Vertex3))
             {
@@ -78,12 +86,12 @@ namespace Shapes
             //}
 
         }
-        public void Move(double deltaX, double deltaY)
-        {
-            Vertex1.Move(deltaX, deltaY);
-            Vertex2.Move(deltaX, deltaY);
-            Vertex3.Move(deltaX, deltaY);
-        }
+        //public void Move(double deltaX, double deltaY)
+        //{
+        //    Vertex1.Move(deltaX, deltaY);
+        //    Vertex2.Move(deltaX, deltaY);
+        //    Vertex3.Move(deltaX, deltaY);
+        //}
 
         public double ComputeArea()
         {
