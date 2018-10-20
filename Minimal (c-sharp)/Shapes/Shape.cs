@@ -21,6 +21,13 @@ namespace Shapes
             //Operation not permitted since this is a leaf node.          
         }
 
+        public override List<Shape2d> GetMyShapes()
+        {
+            List<Shape2d> myNullShapes = new List<Shape2d>();
+            return myNullShapes;
+            //This returns null because we don't want the simple shape to have shapes
+        }
+
         public override string GetData()
         {
             return "Name: " + name + "\tcolor: " + color;

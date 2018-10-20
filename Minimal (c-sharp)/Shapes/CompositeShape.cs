@@ -8,9 +8,15 @@ namespace Shapes
 {
     public class CompositeShape : Shape2d
     {
-        List<Shape2d> myShapes = new List<Shape2d>();
+        private List<Shape2d> myShapes = new List<Shape2d>();
+        public override List<Shape2d> GetMyShapes()
+        {
+            return myShapes;
+        }
+        public CompositeShape(string name, string color) : base(name, color) {
+            myShapes = new List<Shape2d>();
+        }
 
-        public CompositeShape(string name, string color) : base(name, color) { }
 
         public override void Add(Shape2d _shape2d)
         {
@@ -35,6 +41,7 @@ namespace Shapes
 
             return SBshape2d.ToString();
         }
+
     }
 
 }

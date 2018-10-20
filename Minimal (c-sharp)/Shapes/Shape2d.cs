@@ -25,5 +25,6 @@ namespace Shapes
         public abstract void Remove(Shape2d _shape2d);
 
         public abstract string GetData();
+        public abstract List<Shape2d> GetMyShapes();
     }
 }
