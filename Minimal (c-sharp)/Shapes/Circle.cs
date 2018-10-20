@@ -16,13 +16,15 @@ namespace Shapes
          * @param radius            The radius of the circle -- must be greater or equal to zero.
          * @throws ShapeException   The exception thrown if the x, y, or z are not valid
          */
-        public Circle(double x, double y, double radius)
+        public Circle(string _name, string _color, double x, double y, double radius): base(_name, _color)
         {
             Validator.ValidatePositiveDouble(radius, "Invalid radius");
-            var Center = new Point(x, y);
+            var Center = new Point(_name + "CenterPoint", _color, x, y);
             myPoints = new List<Point>();
             myPoints.Add(Center);
             Radius = radius;
+            this.name = _name;
+            this.color = _color;
         }
 
         /**
@@ -32,7 +34,7 @@ namespace Shapes
          * @param radius            The radius of the circle -- must be greater or equal to zero.
          * @throws ShapeException   The exception thrown if the x, y, or z are not valid
          */
-        public Circle(Point center, double radius) {
+        public Circle(string _name, string _color, Point center, double radius): base(_name, _color) {
         
             Validator.ValidatePositiveDouble(radius, "Invalid radius");
             if (center == null)

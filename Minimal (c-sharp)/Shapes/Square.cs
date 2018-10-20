@@ -16,12 +16,12 @@ namespace Shapes
         
         public Line Width { get; private set; }
 
-            public Square(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
+            public Square(string _name, string _color, double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4):base(_name, _color)
             {
-                var Vertex1 = new Point(x1, y1);
-                var Vertex2 = new Point(x2, y2);
-                var Vertex3 = new Point(x3, y3);
-                var Vertex4 = new Point(x4, y4);
+                var Vertex1 = new Point(_name + "'s Vertex1", _color, x1, y1);
+                var Vertex2 = new Point(_name + "'s Vertex2", _color, x2, y2);
+                var Vertex3 = new Point(_name + "'s Vertex3", _color, x3, y3);
+                var Vertex4 = new Point(_name + "'s Vertex4", _color, x4, y4);
             
                 myPoints = new List<Point>();
                 myPoints.Add(Vertex1);
@@ -34,7 +34,7 @@ namespace Shapes
                 {
                     throw new ShapeException("Two or more Square Vertices are equal");
                 }
-                Width = new Line(Vertex1, Vertex2);
+                Width = new Line(_name + "'s Width", _color, Vertex1, Vertex2);
 
                 if (!AreSidesSameLength())
                 {
@@ -46,7 +46,7 @@ namespace Shapes
                     throw new ShapeException("Atleast one vertex is not squared with the other vertices");
                 }
                     }
-        public Square(Point _Vertex1, Point _Vertex2, Point _Vertex3, Point _Vertex4)
+        public Square(string _name, string _color, Point _Vertex1, Point _Vertex2, Point _Vertex3, Point _Vertex4): base(_name, _color)
             {
                 var Vertex1 = _Vertex1;
                 var Vertex2 = _Vertex2;
@@ -63,7 +63,7 @@ namespace Shapes
                 {
                     throw new ShapeException("Two or more Square Vertices are equal");
                 }
-                Width = new Line(Vertex1, Vertex2);
+                Width = new Line(_name + "'s Width", _color, Vertex1, Vertex2);
 
                 if (!AreSidesSameLength())
                 {
@@ -131,10 +131,10 @@ namespace Shapes
             var Vertex2 = myPoints[1];
             var Vertex3 = myPoints[2];
             var Vertex4 = myPoints[3];
-                Line Edge1 = new Line(Vertex1, Vertex2);
-                Line Edge2 = new Line(Vertex2, Vertex3);
-                Line Edge3 = new Line(Vertex3, Vertex4);
-                Line Edge4 = new Line(Vertex4, Vertex1);
+                Line Edge1 = new Line("null","null", Vertex1, Vertex2);
+                Line Edge2 = new Line("null","null", Vertex2, Vertex3);
+                Line Edge3 = new Line("null","null", Vertex3, Vertex4);
+                Line Edge4 = new Line("null","null", Vertex4, Vertex1);
             double length1 = Edge1.ComputeLength();
             double length2 = Edge2.ComputeLength();
             double length3 = Edge3.ComputeLength();
@@ -155,8 +155,8 @@ namespace Shapes
             var Vertex2 = myPoints[1];
             var Vertex3 = myPoints[2];
             var Vertex4 = myPoints[3];
-                Line Diagonal1 = new Line(Vertex1, Vertex3);
-                Line Diagonal2 = new Line(Vertex2, Vertex4);
+                Line Diagonal1 = new Line("null","null", Vertex1, Vertex3);
+                Line Diagonal2 = new Line("null","null", Vertex2, Vertex4);
                 if (Validator.AreLineLengthsEqual(Diagonal1, Diagonal2))
                     return true;
                 return false;

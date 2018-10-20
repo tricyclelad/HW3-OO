@@ -16,8 +16,15 @@ namespace Shapes
          * @param y2                The y-location of second point -- must be a valid double.
          * @throws ShapeException   Exception throw if any parameter is invalid
          */
-        public Line(double x1, double y1, double x2, double y2)
+        //public Line(string name, string color)
+        //{
+        //    this.name = name;
+        //    this.color = color;
+        //}
+        public Line(string _name, string _color, double x1, double y1, double x2, double y2) : base(_name, _color)
         {
+            this.name = _name;
+            this.color = _color;
             if (x1 == x2 && y1 == y2)
                 throw new ShapeException("Cannot create a line of length 0");
             var Point1 = new Point(x1, y1);
@@ -33,8 +40,11 @@ namespace Shapes
          * @param point2            The second point -- must not b e null
          * @throws ShapeException   Exception throw if any parameter is invalid
          */
-        public Line(Point point1, Point point2)
+        public Line(string _name, string _color, Point point1, Point point2):base(_name, _color)
         {
+            this.name = _name;
+            this.color = _color;
+            
             if (point1 == null || point2 == null)
                 throw new ShapeException("Invalid point");
             if (point1.X == point2.X && point1.Y == point2.Y)

@@ -1,16 +1,18 @@
 ﻿namespace Shapes
 {
-    public class Point
+    public class Point : Shape
     {
         public double X { get; private set; }
         public double Y { get; private set; }
 
-        public Point(double x, double y)
+        public Point(string _name, string _color, double x, double y) : base(_name, _color)
         {
             Validator.ValidateDouble(x, "Invalid x-location point");
             Validator.ValidateDouble(y, "Invalid y-location point");
             X = x;
             Y = y;
+            this.name = _name;
+            this.color = _color;
         }
 
         /**
@@ -56,7 +58,7 @@
          */
         public Point Clone()
         {
-            return new Point(X, Y);
+            return new Point(this.name, this.color, X, Y);
         }
 
 }
