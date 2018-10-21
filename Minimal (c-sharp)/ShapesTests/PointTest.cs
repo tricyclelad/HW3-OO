@@ -10,14 +10,18 @@ namespace ShapesTests
         public void TestValidConstruction()
         {
             var p1 = new Point("Point1", "Red", 1, 2);
+            string test1 = "Point1 Red 1 2 ";
             Assert.AreEqual(1, p1.X, 0);
             Assert.AreEqual(2, p1.Y, 0);
-            Assert.AreEqual(p1.GetData(), "Name: " + "Point1" + "\tcolor: " + "Red" );
+            string test2 = p1.GetData();
+            Assert.AreEqual(test2, test1);
 
             p1 = new Point("Point2", "Blue", 1.111, 2.222);
+            string test3 = "Point2 Blue 1.111 2.222 ";
             Assert.AreEqual(1.111, p1.X, 0);
             Assert.AreEqual(2.222, p1.Y, 0);
-            Assert.AreEqual(p1.GetData(), "Name: " + "Point2" + "\tcolor: " + "Blue" );
+            string test4 = p1.GetData();
+            Assert.AreEqual(test3, test4);
         }
 
         [TestMethod]

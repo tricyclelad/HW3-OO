@@ -13,7 +13,7 @@ namespace ShapesTests
             Shape p1 = new Point("Point1", "Red", 1, 2);
             Assert.AreEqual(1, p1.myPoints[0].X);
             Assert.AreEqual(2, p1.myPoints[0].Y);
-            Assert.AreEqual(p1.GetData(), "Name: " + "Point1" + "\tcolor: " + "Red");
+            Assert.AreEqual(p1.GetData(), "Point1 Red 1 2 ");
         }
         [TestMethod]
         public void TestValidConstruction2()
@@ -25,7 +25,7 @@ namespace ShapesTests
             Assert.AreEqual(2, L1.myPoints[0].Y);
             Assert.AreEqual(3, L1.myPoints[1].X);
             Assert.AreEqual(4, L1.myPoints[1].Y);
-            Assert.AreEqual(L1.GetData(), "Name: " + "Line1" + "\tcolor: " + "Black");
+            Assert.AreEqual(L1.GetData(), "Line1 Black 1 2 3 4 ");
         }
 
         [TestMethod]

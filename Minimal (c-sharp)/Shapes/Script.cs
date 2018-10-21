@@ -9,22 +9,6 @@ namespace Shapes
 {
     public class Script
     {
-        //        private static readonly DataContractJsonSerializer JsonSerializer = new DataContractJsonSerializer(typeof(List<TreeExtrinsicState>));
-
-        //    private readonly List<Tree> _trees = new List<Tree>();
-        //    private readonly object _myLock = new object();
-
-        //    public TreeFactory Factory { get; set; }
-        //    public bool IsDirty { get; private set; } = true;
-
-        //    public void Clear()
-        //    {
-        //        lock (_myLock)
-        //        {
-        //            _trees.Clear();
-        //            IsDirty = true;
-        //        }
-        //    }
         public string[] translator(StreamReader _input)
         {
             string line = _input.ReadLine();
@@ -41,6 +25,15 @@ namespace Shapes
             Shape2d myShape = shapeMaker.GetShape2D(parsedString);
             return myShape;
         }
+        //public Stream Save(Shape myShape)
+        //{
+        //    var writer = new StreamWriter();
+        //    string[] parsedString = translator(reader);
+        //    Shape2dFactory shapeMaker = new Shape2dFactory();
+        //    Shape2d myShape = shapeMaker.GetShape2D(parsedString);
+        //    return myShape;
+        //}
+
 
         //    public void Save(string filename)
         //    {

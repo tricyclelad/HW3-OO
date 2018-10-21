@@ -34,7 +34,20 @@ namespace Shapes
 
         public override string GetData()
         {
-            return "Name: " + name + "\tcolor: " + color;
+            StringBuilder myBuilder = new StringBuilder();
+            myBuilder.Append(name + " " + color + " " );
+            foreach (var point in myPoints)
+            {
+                for (int i = 0; i < point.myPoints.Count; i++)
+                {
+                    myBuilder.Append(point.myPoints[i].X);
+                    myBuilder.Append(" ");
+                    myBuilder.Append(point.myPoints[i].Y);
+                    myBuilder.Append(" ");
+                }
+
+            }
+            return myBuilder.ToString();
         }
         //public abstract double ComputeArea();
         public override void Move(double deltaX, double deltaY)

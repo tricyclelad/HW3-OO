@@ -42,7 +42,7 @@ namespace Shapes
 
             foreach (Shape2d twoD in myShapes)
             {
-                SBshape2d.Append(twoD.GetData() + "\n");
+                SBshape2d.Append(twoD.GetData());
             }
 
             return SBshape2d.ToString();

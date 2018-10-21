@@ -11,8 +11,8 @@ namespace ShapesTests
         [TestMethod]
         public void TestMethod1()
         {
-            Shape myRectangle = new Rectangle("Rectangle1", "Fusion Blue", 0, 0, 0, 1, 1, 1, 1, 0);
-            Shape myRectangle2 = new Rectangle("Rectangle2", "Fusion Green", 0, 0, 0, 1, 1, 1, 1, 0);
+            Shape myRectangle = new Rectangle("Rectangle1", "FusionBlue", 0, 0, 0, 1, 1, 1, 1, 0);
+            Shape myRectangle2 = new Rectangle("Rectangle2", "FusionGreen", 0, 0, 0, 1, 1, 1, 1, 0);
             Shape p1 = new Point("Point1", "Red", 1, 2);
             Shape p2 = new Point("Point2", "Blue", 3, 4);
             Shape2d rect2d = myRectangle;
@@ -61,8 +61,7 @@ namespace ShapesTests
             Jumble.Add(Jumble);
             Jumble.Add(rect2d);
             Jumble.Add(p12d);
-            Assert.AreEqual(Jumble.GetData(), "Name: Rectangle1\tcolor: Fusion Blue\nName: Point1\tcolor: Red\n") ;
-
+            Assert.AreEqual(Jumble.GetData(), "Rectangle1 FusionBlue 1 1 1 2 2 2 2 1 Point1 Red 2 3 ");
         }
     }
 }
