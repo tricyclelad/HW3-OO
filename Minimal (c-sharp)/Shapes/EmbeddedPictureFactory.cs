@@ -11,16 +11,26 @@ namespace Shapes
     {
         private static Dictionary<string, EmbeddedPicture> embeddedPictureByName = new Dictionary<string, EmbeddedPicture>();
 
-        public static EmbeddedPicture getEmbeddedPicture(string _key, string _color, Bitmap _storedImage, int _width, int _height, List<Point> _picturePoints)         
+        public static EmbeddedPicture getEmbeddedPicture(string _key, string _color, Bitmap _storedImage, int _width, int _height, List<Point> _picturePoints)
         {
-            EmbeddedPicture myEmbeddedPicture = embeddedPictureByName[_key];
-            if (myEmbeddedPicture == null)
+            EmbeddedPicture myEmbeddedPicture;
+            //if (embeddedPictureByName == null)
+            //{
+            //    myEmbeddedPicture = new EmbeddedPicture(_key, _color, _storedImage, _width, _height, _picturePoints);
+            //    embeddedPictureByName.Add(_key, myEmbeddedPicture);
+            //    return myEmbeddedPicture;
+            //}
+            if (embeddedPictureByName.ContainsKey(_key))
             {
-                myEmbeddedPicture = new EmbeddedPicture(_key, _color, _storedImage, _width, _height, _picturePoints);
-                embeddedPictureByName.Add(_key, myEmbeddedPicture);
+                myEmbeddedPicture = embeddedPictureByName[_key];
+                return myEmbeddedPicture;
             }
-            return myEmbeddedPicture;
-
+            else
+            {
+                 myEmbeddedPicture = new EmbeddedPicture(_key, _color, _storedImage, _width, _height, _picturePoints);
+                embeddedPictureByName.Add(_key, myEmbeddedPicture);
+                return myEmbeddedPicture;
+            }
         }
     }
 }
