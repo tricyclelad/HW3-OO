@@ -8,6 +8,43 @@ namespace Shapes
 {
     class Shape2dFactory
     {
+        public Shape2d GetShape2D(string[] parseList)
+        {
+
+            switch (parseList[0])
+            {
+                case "Point":
+                    return PointFactory(string[] parseList);
+                    break;
+                case "Line":
+                    return LineFatory(string[] parseList);
+                    break;
+                case "Circle":
+                    return CircleFactory(string[] parseList);
+                    break;
+                case "Ellipse":
+                    return EllipseFactory(string[] parseList);
+                    break;
+                case "Square":
+                    return SquareFactory(string[] parseList);
+                    break;
+                case "Rectangle":
+                    return RectangleFactory(string[] parseList);
+                    break;
+                case "Triangle":
+                    return TriangleFactory(string[] parseList);
+                    break;
+                case "CompositeShape":
+                    return CompositeShapeFactory(string[] parseList);
+                    break;
+                case "EmbeddedPicture":
+                    return EmbeddedPictureFactory(string[] parseList);
+                    break;
+
+                default:
+                    break;
+            }
+        }
         //CardFactory factory = null;
         //Console.Write("Enter the card type you would like to visit: ");  
         //    string car = Console.ReadLine();  
