@@ -50,6 +50,7 @@
     <Compile Include="CompositeShape.cs" />
     <Compile Include="EmbeddedPicture.cs" />
     <Compile Include="EmbeddedPictureFactory.cs" />
+    <Compile Include="Script.cs" />
     <Compile Include="Shape2d.cs" />
     <Compile Include="Ellipse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Point.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Shape.cs" />
+    <Compile Include="Shape2dFactory.cs" />
     <Compile Include="ShapeException.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Triangle.cs" />
