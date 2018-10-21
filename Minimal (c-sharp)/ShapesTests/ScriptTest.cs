@@ -18,6 +18,14 @@ namespace ShapesTests
             Assert.AreEqual(myShape.color,"Colour");
             Assert.AreEqual(myShape.name,"Name");
 
+            MemoryStream myMemoryStream = myScript.Save(myShape);
+            StreamWriter writer = new StreamWriter(myMemoryStream);
+
+                using (FileStream fs = new FileStream("output.txt", FileMode.OpenOrCreate))
+                {
+                    myMemoryStream.CopyTo(fs);
+                    fs.Flush();
+                }
         }
     }
 }

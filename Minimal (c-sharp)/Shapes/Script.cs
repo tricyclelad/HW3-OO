@@ -25,15 +25,17 @@ namespace Shapes
             Shape2d myShape = shapeMaker.GetShape2D(parsedString);
             return myShape;
         }
-        //public Stream Save(Shape myShape)
-        //{
-        //    var writer = new StreamWriter();
-        //    string[] parsedString = translator(reader);
-        //    Shape2dFactory shapeMaker = new Shape2dFactory();
-        //    Shape2d myShape = shapeMaker.GetShape2D(parsedString);
-        //    return myShape;
-        //}
+        public MemoryStream Save(Shape2d _myShape)
+        {
+            UnicodeEncoding uniEncoding = new UnicodeEncoding();
 
+            string scriptString = _myShape.GetData();
+            byte[] firstString = uniEncoding.GetBytes(scriptString);
+
+            MemoryStream output = new MemoryStream(100);
+            output.Write(firstString,0,firstString.Length);
+            return output;
+        }
 
         //    public void Save(string filename)
         //    {
