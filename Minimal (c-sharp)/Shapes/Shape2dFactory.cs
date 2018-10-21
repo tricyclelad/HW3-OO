@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class Shape2dFactory
+    public class Shape2dFactory
     {
         public Shape2d GetShape2D(string[] parseList)
         {
@@ -14,35 +14,30 @@ namespace Shapes
             switch (parseList[0])
             {
                 case "Point":
-                    return PointFactory(string[] parseList);
-                    break;
+                   PointFactory pf = new PointFactory();
+                   return pf.GetPoint(parseList);
+                    
                 case "Line":
-                    return LineFatory(string[] parseList);
-                    break;
-                case "Circle":
-                    return CircleFactory(string[] parseList);
-                    break;
-                case "Ellipse":
-                    return EllipseFactory(string[] parseList);
-                    break;
-                case "Square":
-                    return SquareFactory(string[] parseList);
-                    break;
-                case "Rectangle":
-                    return RectangleFactory(string[] parseList);
-                    break;
-                case "Triangle":
-                    return TriangleFactory(string[] parseList);
-                    break;
-                case "CompositeShape":
-                    return CompositeShapeFactory(string[] parseList);
-                    break;
-                case "EmbeddedPicture":
-                    return EmbeddedPictureFactory(string[] parseList);
-                    break;
+                    LineFactory lf = new LineFactory();
+                    return lf.GetLine(parseList);
+                //case "Circle":
+                //    return CircleFactory(string[] parseList);
+                //case "Ellipse":
+                //    return EllipseFactory(string[] parseList);
+                //case "Square":
+                //    return SquareFactory(string[] parseList);
+                //case "Rectangle":
+                //    return RectangleFactory(string[] parseList);
+                //case "Triangle":
+                //    return TriangleFactory(string[] parseList);
+                //case "CompositeShape":
+                //    return CompositeShapeFactory(string[] parseList);
+                //case "EmbeddedPicture":
+                //    return EmbeddedPictureFactory(string[] parseList);
 
                 default:
-                    break;
+                    Shape2d point = new Point("null","null",-1,-1);
+                    return point;
             }
         }
         //CardFactory factory = null;

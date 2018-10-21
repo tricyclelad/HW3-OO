@@ -47,9 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircleFactory.cs" />
     <Compile Include="CompositeShape.cs" />
+    <Compile Include="EllipseFactory.cs" />
     <Compile Include="EmbeddedPicture.cs" />
     <Compile Include="EmbeddedPictureFactory.cs" />
+    <Compile Include="LineFactory.cs" />
+    <Compile Include="PointFactory.cs" />
+    <Compile Include="RectangleFactory.cs" />
     <Compile Include="Script.cs" />
     <Compile Include="Shape2d.cs" />
     <Compile Include="Ellipse.cs" />
@@ -62,7 +67,9 @@
     <Compile Include="Shape2dFactory.cs" />
     <Compile Include="ShapeException.cs" />
     <Compile Include="Square.cs" />
+    <Compile Include="SquareFactory.cs" />
     <Compile Include="Triangle.cs" />
+    <Compile Include="TriangleFactory.cs" />
     <Compile Include="Validator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

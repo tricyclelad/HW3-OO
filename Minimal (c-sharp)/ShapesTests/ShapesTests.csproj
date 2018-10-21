@@ -67,6 +67,7 @@
     <Compile Include="CompositeShapeTest.cs" />
     <Compile Include="EmbeddedPictureTest.cs" />
     <Compile Include="EmbeddedPictureFactoryTest.cs" />
+    <Compile Include="Shape2dFactoryTest.cs" />
     <Compile Include="ValidatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
