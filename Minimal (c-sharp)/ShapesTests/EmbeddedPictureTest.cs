@@ -25,7 +25,23 @@ namespace ShapesTests
             points.Add(p4);
 
             EmbeddedPicture myEmbed = new EmbeddedPicture("Embed1", "AquaMarine", image, 5, 5, points);
+            Bitmap image2 = new Bitmap(image,5,5); 
+            Assert.AreEqual(myEmbed.Width, 5);
+            Assert.AreEqual(myEmbed.Height, 5);
+            Assert.AreEqual(myEmbed.storedImage.Size, image2.Size);
+            Assert.AreEqual(myEmbed.storedImage.Flags, image2.Flags);
 
+            Assert.AreEqual(myEmbed.ComputeArea(), 25);
+            myEmbed.Add(p1);
+            myEmbed.Move(1,1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[0].X, 1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[0].Y, 1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[1].X, 1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[1].Y, 1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[2].X, 1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[2].Y, 1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[3].X, 1);
+            Assert.AreEqual(myEmbed.myEmbeddedPicturePoints[3].Y, 1);
         }
     }
 }

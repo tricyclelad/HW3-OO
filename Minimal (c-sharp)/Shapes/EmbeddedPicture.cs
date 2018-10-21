@@ -10,9 +10,9 @@ namespace Shapes
 {
     public class EmbeddedPicture : Shape2d
     {
-        Bitmap storedImage;
+        public Bitmap storedImage;
         public int Width, Height;
-        List<Point> myEmbeddedPicturePoints;
+        public List<Point> myEmbeddedPicturePoints;
         
         public EmbeddedPicture(string _name, string _color, Bitmap _storedImage, int width, int height, List<Point> _picturePoints):base(_name, _color)
         {
