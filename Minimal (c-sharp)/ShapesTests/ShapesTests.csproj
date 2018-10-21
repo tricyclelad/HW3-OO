@@ -68,6 +68,7 @@
     <Compile Include="EmbeddedPictureTest.cs" />
     <Compile Include="EmbeddedPictureFactoryTest.cs" />
     <Compile Include="Shape2dFactoryTest.cs" />
+    <Compile Include="ScriptTest.cs" />
     <Compile Include="ValidatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +78,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Point.txt" />
     <Content Include="Usu-Logo.bmp" />
   </ItemGroup>
   <Choose>

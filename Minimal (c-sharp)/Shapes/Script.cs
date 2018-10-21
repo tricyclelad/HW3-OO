@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class Script
+    public class Script
     {
         //        private static readonly DataContractJsonSerializer JsonSerializer = new DataContractJsonSerializer(typeof(List<TreeExtrinsicState>));
 
@@ -33,11 +33,13 @@ namespace Shapes
 
         }
 
-        public void Load(Stream input)
+        public Shape2d Load(Stream input)
         {
             var reader = new StreamReader(input);
             string[] parsedString = translator(reader);
-
+            Shape2dFactory shapeMaker = new Shape2dFactory();
+            Shape2d myShape = shapeMaker.GetShape2D(parsedString);
+            return myShape;
         }
 
         //    public void Save(string filename)
