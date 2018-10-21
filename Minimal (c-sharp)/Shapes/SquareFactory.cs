@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class SquareFactory
+    public class SquareFactory
     {
+        public Shape2d GetSquare(string[] parseList)
+        {
+            Square mySquare = new Square(parseList[1], parseList[2],Convert.ToDouble(parseList[3]), Convert.ToDouble(parseList[4]), Convert.ToDouble(parseList[5]), Convert.ToDouble(parseList[6]), Convert.ToDouble(parseList[7]), Convert.ToDouble(parseList[8]), Convert.ToDouble(parseList[9]), Convert.ToDouble(parseList[10]));
+            return mySquare;
+        }
     }
 }

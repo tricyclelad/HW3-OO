@@ -20,16 +20,21 @@ namespace Shapes
                 case "Line":
                     LineFactory lf = new LineFactory();
                     return lf.GetLine(parseList);
-                //case "Circle":
-                //    return CircleFactory(string[] parseList);
-                //case "Ellipse":
-                //    return EllipseFactory(string[] parseList);
-                //case "Square":
-                //    return SquareFactory(string[] parseList);
-                //case "Rectangle":
-                //    return RectangleFactory(string[] parseList);
-                //case "Triangle":
-                //    return TriangleFactory(string[] parseList);
+                case "Circle":
+                    CircleFactory cf = new CircleFactory();
+                    return cf.GetCircle(parseList);
+                case "Ellipse":
+                    EllipseFactory ef = new EllipseFactory();
+                    return ef.GetEllipse(parseList);
+                case "Square":
+                    SquareFactory sf = new SquareFactory();
+                    return sf.GetSquare(parseList);
+                case "Rectangle":
+                    RectangleFactory rf = new RectangleFactory();
+                    return rf.GetRectangle(parseList);
+                case "Triangle":
+                    TriangleFactory tf = new TriangleFactory();
+                    return tf.GetTriangle(parseList);
                 //case "CompositeShape":
                 //    return CompositeShapeFactory(string[] parseList);
                 //case "EmbeddedPicture":
