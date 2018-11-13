@@ -9,6 +9,7 @@ namespace Shapes
 {
     public class EmbeddedPictureFactory
     {
+        //Change embeddedPicture to bitmap but wrap it in a class to make it extensible.
         private static Dictionary<string, EmbeddedPicture> embeddedPictureByName = new Dictionary<string, EmbeddedPicture>();
 
         public static EmbeddedPicture getEmbeddedPicture(string _key, string _color, Bitmap _storedImage, int _width, int _height, List<Point> _picturePoints)

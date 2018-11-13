@@ -16,7 +16,6 @@ namespace Shapes
                 case "Point":
                    PointFactory pf = new PointFactory();
                    return pf.GetPoint(parseList);
-                    
                 case "Line":
                     LineFactory lf = new LineFactory();
                     return lf.GetLine(parseList);
